@@ -1,0 +1,8 @@
+[project]
+name = "quizgrade"
+version = "0.6.1"
+description = "University quiz grading pipeline: answer matching, partial credit, departmental curve, grade report"
+requires-python = ">=3.9"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

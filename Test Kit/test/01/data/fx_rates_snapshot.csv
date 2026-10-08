@@ -1,0 +1,12 @@
+# FX rate snapshot for audit - DO NOT USE FOR LIVE CONVERSION
+# Live rates live in src/rates.py (SNAPSHOT_DATE 2026-09-01).
+# This file is the PREVIOUS quarter's snapshot, kept for reconciling
+# old reports. A mismatch with src/rates.py is expected and normal.
+snapshot_date,currency,rate_vs_usd
+2026-06-01,USD,1.0
+2026-06-01,EUR,0.9301
+2026-06-01,GBP,0.7955
+2026-06-01,CNY,7.2080
+2026-06-01,HKD,7.8450
+2026-06-01,JPY,148.20
+2026-06-01,KRW,1372.0

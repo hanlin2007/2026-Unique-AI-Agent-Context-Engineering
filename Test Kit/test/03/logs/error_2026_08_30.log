@@ -1,0 +1,53 @@
+================================================================================
+passpolicy CI - captured stderr - 2026-08-30T02:03:22Z
+job: nightly-audit  build: #201  ref: tags/v1.1.0  runner: ci-ubuntu-03
+================================================================================
+Traceback (most recent call last):
+  File "/home/ci/builds/passpolicy/v1.1.0/scripts/audit_passwords.py", line 62, in <module>
+    rejected = [c for c in candidates if not is_compliant(c)]
+  File "/home/ci/builds/passpolicy/v1.1.0/scripts/audit_passwords.py", line 62, in <listcomp>
+    rejected = [c for c in candidates if not is_compliant(c)]
+  File "/home/ci/builds/passpolicy/v1.1.0/src/policy.py", line 71, in is_compliant
+    return not validate(password)
+  File "/home/ci/builds/passpolicy/v1.1.0/src/policy.py", line 66, in validate
+    if is_common(password):
+  File "/home/ci/builds/passpolicy/v1.1.0/src/blacklist.py", line 19, in is_common
+    COMMON = _load_common()
+  File "/home/ci/builds/passpolicy/v1.1.0/src/blacklist.py", line 14, in _load_common
+    return frozenset(fh.read().split())
+  File "/usr/lib/python3.11/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 4412: invalid continuation byte
+================================================================================
+NOTE (triage, 2026-08-30 08:47 UTC, r.alvarez):
+  v1.1.0 era: the file-backed blacklist loader hit a latin-1 byte in an
+  old pen-test dump. Patched same day (explicit encoding=). Moot since
+  the v1.2.0 inline migration - KEPT HERE because blacklist.py is once
+  again the suspect for the red suite (issue #29): same module, same
+  data provenance question (which list is authoritative?). See
+  KNOWN_ISSUES.md and fix_suggestion.md.
+================================================================================
+
+================================================================================
+passpolicy CI - captured stdout tail - 2026-09-27T15:44:36Z
+job: unit-tests  build: #292  ref: fix/issue-29-blacklist-drift@7c1a9e0
+================================================================================
+$ python -m pytest tests/test_task.py -q
+..FF.F....                                                              [100%]
+=================================== FAILURES ===================================
+______________ test_validate_min_length_boundary ______________
+assert ['min_length'] == []
+______________ test_is_compliant_min_length_boundary ______________
+assert False is True
+______________ test_validate_underscore_special ______________
+assert ['needs_special'] == []
+3 failed, 6 passed in 0.04s
+================================================================================
+NOTE (triage, 2026-09-27 16:20 UTC, r.alvarez):
+  Failure signature with the v1 data-path patch applied. NOTE that the
+  rule ids in the failures are min_length / needs_special, NOT
+  blacklisted - t.oka flagged the same thing in review. I still think
+  the data path is the right layer (the struck entries are one edit
+  from the test passwords) but I cannot yet explain the rule ids.
+  Iterating on the loader this week.
+================================================================================

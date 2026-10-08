@@ -1,0 +1,48 @@
+2026-10-01T09:00:11Z INFO  [ci] job unit-tests starting (build #741)
+2026-10-01T09:00:11Z INFO  [ci] checkout main@b61e2c4 -> /home/ci/builds/logwatch/main
+2026-10-01T09:00:12Z INFO  [ci] python 3.11.6, pytest 8.2.1
+2026-10-01T09:00:13Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-10-01T09:00:13Z INFO  [pytest] 5 failed, 5 passed in 0.02s
+2026-10-01T09:00:14Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-01T09:00:15Z INFO  [ci] notification sent to #logwatch-ci
+2026-10-01T14:22:41Z INFO  [ci] job unit-tests starting (build #742)
+2026-10-01T14:22:43Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-10-01T14:22:43Z INFO  [pytest] 5 failed, 5 passed in 0.02s
+2026-10-01T14:22:43Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-02T02:30:19Z INFO  [ci] job nightly-capacity starting (build #743)
+2026-10-02T02:30:19Z INFO  [ci] checkout main@b61e2c4 -> /home/ci/builds/logwatch/main
+2026-10-02T02:30:21Z INFO  [capacity] parsing data/access.log
+2026-10-02T02:30:21Z INFO  [capacity] parsed 26 events, 0 rejected
+2026-10-02T02:30:22Z INFO  [capacity] CDN cross-check: 15:00 hour counted 4, CDN says 7 (-43%)
+2026-10-02T02:30:22Z WARN  [capacity] hour shortfall over threshold 10% - consistent with issue #71
+2026-10-02T02:30:23Z INFO  [capacity] p95 this window: 2.310s (APM shows 2.200s)
+2026-10-02T02:30:24Z INFO  [capacity] wrote /tmp/out/capacity_2026_10_02.json (7 KB)
+2026-10-02T02:30:25Z INFO  [ci] job nightly-capacity finished in 5.9s
+2026-10-03T02:30:19Z INFO  [ci] job nightly-capacity starting (build #744)
+2026-10-03T02:30:21Z INFO  [capacity] parsed 26 events, 0 rejected
+2026-10-03T02:30:22Z INFO  [capacity] CDN cross-check: 15:00 hour counted 4, CDN says 7 (-43%)
+2026-10-03T02:30:22Z WARN  [capacity] hour shortfall over threshold 10% - consistent with issue #71
+2026-10-03T02:30:25Z INFO  [ci] job nightly-capacity finished in 5.7s
+2026-10-04T10:31:02Z INFO  [ci] job unit-tests starting (build #745)
+2026-10-04T10:31:02Z INFO  [ci] checkout fix/issue-71-referrer-regex@d9a03f7
+2026-10-04T10:31:04Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-10-04T10:31:04Z INFO  [pytest] 5 failed, 5 passed in 0.02s
+2026-10-04T10:31:04Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-04T10:31:05Z INFO  [ci] k.vasquez's patch v1 did NOT go green - see notes/meeting_2026_10_05.md
+2026-10-05T02:30:19Z INFO  [ci] job nightly-capacity starting (build #746)
+2026-10-05T02:30:21Z INFO  [capacity] parsed 26 events, 0 rejected
+2026-10-05T02:30:22Z INFO  [capacity] CDN cross-check: 15:00 hour counted 4, CDN says 7 (-43%)
+2026-10-05T02:30:22Z WARN  [capacity] hour shortfall over threshold 10% - consistent with issue #71
+2026-10-05T02:30:25Z INFO  [ci] job nightly-capacity finished in 5.5s
+2026-10-06T09:12:44Z INFO  [ci] job unit-tests starting (build #747)
+2026-10-06T09:12:46Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-10-06T09:12:46Z INFO  [pytest] 5 failed, 5 passed in 0.02s
+2026-10-06T09:12:46Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-06T15:40:12Z INFO  [ci] job lint starting (build #748)
+2026-10-06T15:40:14Z INFO  [ci] ruff clean, 0 warnings
+2026-10-06T15:40:14Z INFO  [ci] job lint finished in 1.8s
+2026-10-07T02:30:19Z INFO  [ci] job nightly-capacity starting (build #749)
+2026-10-07T02:30:21Z INFO  [capacity] parsed 26 events, 0 rejected
+2026-10-07T02:30:22Z INFO  [capacity] CDN cross-check: 15:00 hour counted 4, CDN says 7 (-43%)
+2026-10-07T02:30:22Z WARN  [capacity] hour shortfall over threshold 10% - consistent with issue #71
+2026-10-07T02:30:25Z INFO  [ci] job nightly-capacity finished in 5.6s

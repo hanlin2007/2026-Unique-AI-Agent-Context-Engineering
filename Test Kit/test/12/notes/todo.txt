@@ -1,0 +1,29 @@
+TODO (scratch pad, not groomed)
+
+- [ ] issue #51: statement CSV dialect drift. n.achterberg's patch
+      in fix_suggestion.md - review + apply + rerun suite. BLOCKING
+      month-end sign-off (finance ops reconciling by hand since
+      2026-09-26).
+      (note: branch fix/issue-51-csv-dialect did NOT go green on the
+      first attempt, see logs/ci_pipeline.log build #538 -
+      n.achterberg says the September file must be drifted
+      DIFFERENTLY than the sniffer detects; wants a hex dump of the
+      bank's actual bytes before patch v2)
+- [ ] issue #44: CLI summary column width (cosmetic, backlog)
+- [x] v0.4.0 bank-format rewrite merged (2026-09-19) - suite went
+      red one week later
+- [ ] quarterly policy review prep (due 2026-12): WINDOW_DAYS stays
+      at 2 per Farah; bring the May long-weekend data
+- [ ] archive the August statement next to the August ledger
+      (currently only the ledger is in data/; asymmetric and it
+      annoys the auditors)
+- [ ] ask the bank (again) for a machine-readable export changelog -
+      two format changes this year with zero notice
+- [ ] intern: write the "how to read a recon report" page for the
+      new finance ops hire
+- [ ] per-row field-count assertions in bank_io (n.achterberg's
+      patch v3 direction: crash loudly on drift instead of shifting
+      silently) - review AFTER the bisect, whichever way it lands
+- [ ] add a second fixture month to the suite? parked - one month
+      keeps the expected constants auditable by hand, and hand-
+      auditable beats broad here (Farah, quarterly review notes)

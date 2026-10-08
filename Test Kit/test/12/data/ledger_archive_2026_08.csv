@@ -1,0 +1,16 @@
+date,id,kind,amount,memo
+2026-08-03,L-0061,S,220.00,invoice 1021
+2026-08-04,L-0062,S,175.25,invoice 1022
+2026-08-05,L-0063,F,6.50,monthly account fee accrual
+2026-08-06,L-0064,S,310.00,invoice 1023
+2026-08-07,L-0065,S,88.90,card sale
+2026-08-10,L-0066,S,260.00,invoice 1024
+2026-08-11,L-0067,R,-40.00,refund inv 1019
+2026-08-12,L-0068,T,400.00,transfer from savings
+2026-08-14,L-0069,S,195.50,invoice 1025
+2026-08-18,L-0070,S,132.00,card sale
+2026-08-21,L-0071,S,285.75,invoice 1026
+2026-08-24,L-0072,S,99.99,card sale
+2026-08-26,L-0073,S,350.00,invoice 1027
+2026-08-28,L-0074,S,210.40,invoice 1028
+2026-08-31,L-0075,S,58.25,card sale

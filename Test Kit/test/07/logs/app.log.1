@@ -1,0 +1,44 @@
+2026-09-30T09:00:11Z INFO  [ci] job unit-tests starting (build #987)
+2026-09-30T09:00:11Z INFO  [ci] checkout main@4de21b9 -> /home/ci/builds/quizgrade/main
+2026-09-30T09:00:12Z INFO  [ci] python 3.11.6, pytest 8.2.1
+2026-09-30T09:00:13Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-09-30T09:00:13Z INFO  [pytest] 8 failed, 2 passed in 0.03s
+2026-09-30T09:00:14Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-30T09:00:15Z INFO  [ci] notification sent to #quizgrade-ci
+2026-09-30T14:22:41Z INFO  [ci] job unit-tests starting (build #988)
+2026-09-30T14:22:43Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-09-30T14:22:43Z INFO  [pytest] 8 failed, 2 passed in 0.03s
+2026-09-30T14:22:43Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-01T02:15:19Z INFO  [ci] job gradebook-export starting (build #989)
+2026-10-01T02:15:19Z INFO  [ci] checkout main@4de21b9 -> /home/ci/builds/quizgrade/main
+2026-10-01T02:15:21Z INFO  [export] loading data/submissions.csv (120 submissions)
+2026-10-01T02:15:21Z INFO  [export] loading data/answer_key.csv (10 questions)
+2026-10-01T02:15:22Z INFO  [export] curve canary: class average 80.60 (registrar workbook says 88.81)
+2026-10-01T02:15:22Z WARN  [export] canary drift 9.2% - over alert threshold 3.0%, paging
+2026-10-01T02:15:22Z WARN  [export] registrar rejected 2 finals above 100 (see issue #63)
+2026-10-01T02:15:23Z INFO  [export] wrote /tmp/out/gradebook_2026_10_01.csv (4 KB)
+2026-10-01T02:15:24Z INFO  [ci] job gradebook-export finished in 5.2s
+2026-10-02T02:15:19Z INFO  [ci] job gradebook-export starting (build #990)
+2026-10-02T02:15:22Z INFO  [export] curve canary: class average 80.60 (registrar workbook says 88.81)
+2026-10-02T02:15:22Z WARN  [export] canary drift 9.2% - over alert threshold 3.0%, paging
+2026-10-02T02:15:24Z INFO  [ci] job gradebook-export finished in 5.0s
+2026-10-03T11:31:02Z INFO  [ci] job unit-tests starting (build #991)
+2026-10-03T11:31:02Z INFO  [ci] checkout fix/issue-63-curve-double-apply@c8f04e2
+2026-10-03T11:31:04Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-10-03T11:31:04Z INFO  [pytest] 8 failed, 2 passed in 0.03s
+2026-10-03T11:31:04Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-03T11:31:05Z INFO  [ci] w.nakamura's patch v1 did NOT go green - see notes/meeting_2026_10_04.md
+2026-10-04T02:15:19Z INFO  [ci] job gradebook-export starting (build #992)
+2026-10-04T02:15:22Z INFO  [export] curve canary: class average 80.60 (registrar workbook says 88.81)
+2026-10-04T02:15:24Z INFO  [ci] job gradebook-export finished in 4.8s
+2026-10-05T02:15:19Z INFO  [ci] job gradebook-export starting (build #993)
+2026-10-05T02:15:22Z INFO  [export] curve canary: class average 80.60 (registrar workbook says 88.81)
+2026-10-05T02:15:22Z WARN  [export] canary drift 9.2% - over alert threshold 3.0%, paging
+2026-10-05T02:15:24Z INFO  [ci] job gradebook-export finished in 5.1s
+2026-10-06T09:12:44Z INFO  [ci] job unit-tests starting (build #994)
+2026-10-06T09:12:46Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-10-06T09:12:46Z INFO  [pytest] 8 failed, 2 passed in 0.03s
+2026-10-06T09:12:46Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-06T15:40:12Z INFO  [ci] job lint starting (build #995)
+2026-10-06T15:40:14Z INFO  [ci] ruff clean, 0 warnings
+2026-10-06T15:40:14Z INFO  [ci] job lint finished in 1.9s

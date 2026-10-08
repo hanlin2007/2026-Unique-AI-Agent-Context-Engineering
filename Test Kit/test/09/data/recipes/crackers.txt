@@ -1,0 +1,16 @@
+# Seeded crackers, one sheet tray.
+# Rolled thin, docked, baked hard. The seeded mix changed 2026-08
+# (poppy added); allergen card reprint is still pending, see
+# notes/todo.txt.
+
+title: Seeded Crackers
+base_loaves: 1
+--
+all-purpose flour | 300 | g
+rye flour | 60 | g
+water | 190 | g
+olive oil | 3 | tbsp
+sesame seeds | 2 | tbsp
+poppy seeds | 1 | tbsp
+fine salt | 6 | g
+honey | 2 | tsp

@@ -1,0 +1,45 @@
+2026-09-26T09:40:02Z INFO  [ci] job unit-tests starting (build #233)
+2026-09-26T09:40:02Z INFO  [ci] checkout main@v0.9.0 -> /home/ci/builds/budgetsplit/main
+2026-09-26T09:40:03Z INFO  [ci] python 3.11.6, pytest 8.2.1
+2026-09-26T09:40:04Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-09-26T09:40:04Z INFO  [pytest] tests/test_task.py::test_report_structure PASSED
+2026-09-26T09:40:04Z INFO  [pytest] tests/test_task.py::test_people_roster PASSED
+2026-09-26T09:40:04Z INFO  [pytest] tests/test_task.py::test_balance_anna FAILED
+2026-09-26T09:40:04Z INFO  [pytest] tests/test_task.py::test_balance_dan FAILED
+2026-09-26T09:40:04Z INFO  [pytest] tests/test_task.py::test_balance_erin FAILED
+2026-09-26T09:40:04Z INFO  [pytest] tests/test_task.py::test_transfer_count FAILED
+2026-09-26T09:40:04Z INFO  [pytest] tests/test_task.py::test_transfers_exact FAILED
+2026-09-26T09:40:04Z INFO  [pytest] tests/test_task.py::test_grand_total_eur FAILED
+2026-09-26T09:40:04Z INFO  [pytest] tests/test_task.py::test_fx_grand_total_usd FAILED
+2026-09-26T09:40:04Z INFO  [pytest] tests/test_task.py::test_transfers_well_formed PASSED
+2026-09-26T09:40:05Z INFO  [pytest] 7 failed, 3 passed in 0.05s
+2026-09-26T09:40:05Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-26T09:40:06Z INFO  [ci] notification sent to #budgetsplit-ci
+2026-09-27T10:11:47Z INFO  [ci] job unit-tests starting (build #234)
+2026-09-27T10:11:47Z INFO  [ci] checkout main@b41f2c9 -> /home/ci/builds/budgetsplit/main
+2026-09-27T10:11:49Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-09-27T10:11:49Z INFO  [pytest] 7 failed, 3 passed in 0.05s
+2026-09-27T10:11:49Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-28T02:09:15Z INFO  [ci] job nightly-close starting (build #235)
+2026-09-28T02:09:16Z INFO  [close] loading data/expenses.csv (81 rows)
+2026-09-28T02:09:17Z INFO  [close] building settlement via build_settlement(fx=USD)
+2026-09-28T02:09:17Z INFO  [fx] converting grand total at snapshot 2026-09-01
+2026-09-28T02:09:18Z WARN  [close] EUR total 0.87 under the hand-checked sum - flagging #51
+2026-09-28T02:09:18Z INFO  [close] wrote /tmp/out/close_2026_09.txt (3 KB)
+2026-09-28T02:09:19Z INFO  [ci] job nightly-close finished in 3.7s
+2026-09-29T02:09:12Z INFO  [ci] job nightly-close starting (build #236)
+2026-09-29T02:09:13Z INFO  [close] loading data/expenses.csv (81 rows)
+2026-09-29T02:09:14Z WARN  [close] EUR total 0.87 under the hand-checked sum - flagging #51
+2026-09-29T02:09:15Z INFO  [close] wrote /tmp/out/close_2026_09.txt (3 KB)
+2026-09-29T02:09:15Z INFO  [ci] job nightly-close finished in 3.5s
+2026-10-01T16:22:38Z INFO  [ci] job unit-tests starting (build #237)
+2026-10-01T16:22:38Z INFO  [ci] checkout fix/issue-51-fx-quantize@c07d3a1 -> /home/ci/builds/budgetsplit/fix-51
+2026-10-01T16:22:40Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-10-01T16:22:40Z INFO  [pytest] 7 failed, 3 passed in 0.05s
+2026-10-01T16:22:40Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-01T16:22:41Z INFO  [ci] note: fix/issue-51-fx-quantize did NOT go green (s.nakamura notified)
+2026-10-02T02:09:09Z INFO  [ci] job nightly-close starting (build #238)
+2026-10-02T02:09:10Z INFO  [close] loading data/expenses.csv (81 rows)
+2026-10-02T02:09:11Z WARN  [close] EUR total 0.87 under the hand-checked sum - flagging #51
+2026-10-02T02:09:12Z INFO  [close] wrote /tmp/out/close_2026_09.txt (3 KB)
+2026-10-02T02:09:12Z INFO  [ci] job nightly-close finished in 3.6s

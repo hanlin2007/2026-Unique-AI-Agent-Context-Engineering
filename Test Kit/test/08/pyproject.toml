@@ -1,0 +1,8 @@
+[project]
+name = "logwatch"
+version = "0.3.2"
+description = "Web access-log analytics: hourly buckets, status-class rates, response-time percentiles"
+requires-python = ">=3.9"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

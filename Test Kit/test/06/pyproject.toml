@@ -1,0 +1,8 @@
+[project]
+name = "stocktake"
+version = "0.4.2"
+description = "Two-warehouse inventory reconciliation: FIFO lot consumption, transfers, reorder list, valuation"
+requires-python = ">=3.9"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

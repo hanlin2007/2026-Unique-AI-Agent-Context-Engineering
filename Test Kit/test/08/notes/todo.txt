@@ -1,0 +1,22 @@
+TODO (scratch pad, not groomed)
+
+- [ ] issue #71: requests lost vs CDN. k.vasquez's patch in
+      fix_suggestion.md - review + apply + rerun suite. BLOCKING the
+      nightly capacity report.
+      (note: branch fix/issue-71-referrer-regex did NOT go green on
+      the first attempt, see logs/app.log.1 build #745 - k.vasquez
+      says the rejects list is empty even WITHOUT his patch, which he
+      reads as "the drops happen inside the regex groups, not at the
+      line level". ask him what that means before reviewing)
+- [ ] rebuild the ops bastion (still on v0.2.8-ops-hotfix, source of
+      that TS_FORMAT trace in logs/error_2026_09_30.log) - 2026-10-20
+- [ ] issue #66: histogram bar overflow (cosmetic, backlog)
+- [x] v0.3.0 analytics split signed off (2026-09-10) - modules stable
+- [ ] decide: 5-minute buckets for incident review? parked, see
+      docs/design.md
+- [ ] renew CDN provider API token (expires 2026-10-30)
+- [ ] quarterly review of the APM percentile-method setting (must
+      match docs/log_format.md; owned by s.lindgren)
+- [ ] archive 2026-Q3 capacity reports to object storage
+- [ ] write onboarding doc for new intern (done, docs/onboarding.md)
+- [ ] update the CDN cross-check thresholds after #71 lands

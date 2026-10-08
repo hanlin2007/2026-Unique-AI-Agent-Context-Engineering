@@ -1,0 +1,42 @@
+2026-09-27T23:12:08.411Z DEBUG [report] argv=['python', '-m', 'src.cli', 'summary', 'data/ledger.csv', 'data/bank_statement.csv']
+2026-09-27T23:12:08.413Z DEBUG [ledger_io.load_ledger] open data/ledger.csv newline='' encoding='utf-8'
+2026-09-27T23:12:08.414Z DEBUG [ledger_io.load_ledger] rows=45 parsed, kinds seen: S,R,T,F
+2026-09-27T23:12:08.414Z DEBUG [ledger_io.matchable] kind filter -> considered=45
+2026-09-27T23:12:08.415Z DEBUG [bank_io.load_statement] open data/bank_statement.csv newline='' encoding='utf-8'
+2026-09-27T23:12:08.416Z DEBUG [bank_io.load_statement] header=['date','ref','amount','description']
+2026-09-27T23:12:08.417Z DEBUG [bank_io.load_statement] rows=42 parsed, 0 rejected
+2026-09-27T23:12:08.418Z DEBUG [match] AMOUNT_TOLERANCE=0.01 WINDOW_DAYS=2
+2026-09-27T23:12:08.419Z DEBUG [match] L-0101 2026-09-01 245.00 -> BNK-0201 (2026-09-02, delta=1)
+2026-09-27T23:12:08.419Z DEBUG [match] L-0102 2026-09-01 180.50 -> BNK-0202 (2026-09-02, delta=1)
+2026-09-27T23:12:08.420Z DEBUG [match] ... 2 entries omitted ...
+2026-09-27T23:12:08.421Z DEBUG [match] L-0105 2026-09-05 6.50 -> NO CANDIDATE (unmatched)
+2026-09-27T23:12:08.422Z DEBUG [match] L-0106 2026-09-05 155.00 -> BNK-0205 (2026-09-06, delta=1)
+2026-09-27T23:12:08.423Z DEBUG [match] ... 8 entries omitted ...
+2026-09-27T23:12:08.424Z DEBUG [match] L-0115 2026-09-14 150.00 -> BNK-0214 (2026-09-15, delta=1)
+2026-09-27T23:12:08.424Z DEBUG [match] L-0116 2026-09-14 150.00 -> BNK-0214 (2026-09-15, delta=1)
+2026-09-27T23:12:08.425Z DEBUG [match] L-0117 2026-09-15 305.00 -> BNK-0215 (2026-09-16, delta=1)
+2026-09-27T23:12:08.426Z DEBUG [match] ... 6 entries omitted ...
+2026-09-27T23:12:08.427Z DEBUG [match] L-0123 2026-09-19 6.50 -> NO CANDIDATE (unmatched)
+2026-09-27T23:12:08.428Z DEBUG [match] L-0124 2026-09-19 230.00 -> BNK-0221 (2026-09-20, delta=1)
+2026-09-27T23:12:08.428Z DEBUG [match] L-0125 2026-09-20 88.20: candidate BNK-0222 (2026-09-22, delta=2) -> OUTSIDE WINDOW, rejected
+2026-09-27T23:12:08.429Z DEBUG [match] L-0125 2026-09-20 88.20 -> NO CANDIDATE (unmatched)
+2026-09-27T23:12:08.430Z DEBUG [match] L-0126 2026-09-21 195.00 -> BNK-0223 (2026-09-22, delta=1)
+2026-09-27T23:12:08.430Z DEBUG [match] ... 11 entries omitted ...
+2026-09-27T23:12:08.431Z DEBUG [match] L-0138 2026-09-28 210.00 -> NO CANDIDATE (unmatched)
+2026-09-27T23:12:08.432Z DEBUG [match] ... 6 entries omitted ...
+2026-09-27T23:12:08.433Z DEBUG [match] L-0145 2026-09-30 199.00 -> BNK-0241 (2026-09-30, delta=0)
+2026-09-27T23:12:08.434Z DEBUG [match] done: matched=41 unmatched_ledger=5 unmatched_statement=3
+2026-09-27T23:12:08.435Z DEBUG [report] duplicates=1 (BNK-0214 consumed 2x)
+2026-09-27T23:12:08.435Z DEBUG [report] totals: matched=8832.09 unmatched_ledger=311.20 unmatched_statement=91.30
+2026-09-27T23:12:08.436Z DEBUG [report] done in 0.024s
+# triage note (n.achterberg, 2026-09-28): trace captured on
+# main@4a77c20. Statement rows parsed clean (42/42), yet totals
+# drift and BNK-0214 shows up in the dup count. The drift is what
+# dialect slippage looks like from the inside - see #51. Hex dump
+# of the bank file requested.
+# addendum (n.achterberg, 2026-10-06): hex dump is CLEAN - the file
+# really is plain CSV. My updated read: the drift must come from
+# per-row field handling inside load_statement (a row with a comma
+# inside a description field would parse "clean" and still land
+# wrong). p.delgado keeps pointing at this same trace and saying
+# the answers are already in it. We will all know on Friday.

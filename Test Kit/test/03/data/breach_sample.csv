@@ -1,0 +1,19 @@
+sample_id,source,seen_count,first_seen,notes
+BS-0001,feed-north-2026Q2,41022,2026-04-02,classic dictionary entry
+BS-0002,feed-north-2026Q2,38917,2026-04-02,keyboard walk variant
+BS-0003,feed-east-2026Q2,12770,2026-04-09,sports team plus year
+BS-0004,feed-east-2026Q2,11203,2026-04-11,pet name plus birth year
+BS-0005,feed-north-2026Q2,9814,2026-04-15,leet variant of dictionary word
+BS-0006,feed-south-2026Q2,8730,2026-04-19,company name plus bang
+BS-0007,feed-south-2026Q2,7655,2026-04-22,season plus year
+BS-0008,feed-north-2026Q2,6902,2026-04-25,reversed dictionary word
+BS-0009,feed-east-2026Q2,6418,2026-05-02,firstname plus 123
+BS-0010,feed-north-2026Q2,5907,2026-05-06,film quote fragment
+BS-0011,feed-south-2026Q2,5344,2026-05-09,band name leet variant
+BS-0012,feed-east-2026Q2,4981,2026-05-14,year plus firstname reversed
+BS-0013,feed-north-2026Q2,4520,2026-05-21,phone keypad walk
+BS-0014,feed-south-2026Q2,4109,2026-05-27,hobby plus birth month
+BS-0015,feed-east-2026Q2,3773,2026-06-03,city plus zip fragment
+BS-0016,feed-north-2026Q2,3402,2026-06-10,wifi default pattern
+BS-0017,feed-south-2026Q2,3118,2026-06-17,gaming handle plus year
+BS-0018,feed-east-2026Q2,2860,2026-06-24, doubled word

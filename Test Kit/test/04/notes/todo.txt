@@ -1,0 +1,21 @@
+TODO (scratch pad, not groomed)
+
+- [ ] issue #51: fx totals drift low. s.nakamura's quantize patch in
+      fix_suggestion.md - apply + rerun. BLOCKING the settlement email.
+      (note: branch fix/issue-51-fx-quantize did NOT go green, build
+      #237 - s.nakamura wants to iterate on the rates-table half next;
+      remember the ROUND_HALF_UP import when applying)
+- [ ] d.reyes keeps saying "balances off by hundreds is not a rounding
+      story, and the transfer pays the wrong person" - humoured, parked.
+      The engine modules were reviewed AT the v0.9.0 split. fx.py has
+      the priors (#12, #19). Occam's razor.
+- [ ] re-verify data/fx_snapshot.csv against the treasury feed
+      (s.nakamura, this week) - the audit csv shows diffs within
+      tolerance but the 2026-09-01 line prints 1.08625
+- [ ] send the settlement email once green - the group chat is asking
+- [ ] issue #44: CJK alignment in CLI tables (cosmetic, backlog)
+- [x] v0.9.0 settlement engine split signed off (2026-09-26)
+- [ ] decide: unequal splits (weights) for the next trip? parked,
+      needs a data_dictionary change first
+- [ ] expense CSV: carla wants a "category=sublet" row for the flat
+      deposit refund - hold until the current report is out

@@ -1,0 +1,17 @@
+2026-09-27T02:04:51Z ERROR [export] gradebook export FAILED (tag v0.5.3-registrar-hotfix, job #341)
+Traceback (most recent call last):
+  File "/opt/quizgrade/scripts/gradebook_export.py", line 58, in <module>
+    print(canary_line(rep))
+  File "/opt/quizgrade/scripts/gradebook_export.py", line 31, in canary_line
+    return f"curve canary: {uncurve(avg):.2f} vs {avg:.2f}"
+  File "/opt/quizgrade/src/curve.py", line 27, in uncurve
+    return round(curved_score / factor, 2)
+ZeroDivisionError: float division by zero
+2026-09-27T02:04:51Z ERROR [export] NOTE: this trace is from the v0.5.3-registrar-hotfix tag on the
+2026-09-27T02:04:51Z ERROR [export] department laptop; that tag had CURVE_FACTOR=0 while the Fall
+2026-09-27T02:04:51Z ERROR [export] factor was pending. main has had 1.15 since 2026-09-15. The laptop
+2026-09-27T02:04:51Z ERROR [export] is being reimaged 2026-10-12; do NOT chase this trace on main.
+2026-09-27T02:04:52Z INFO  [export] notification sent to #quizgrade-ops
+2026-09-27T02:05:10Z INFO  [export] rerun on main@4de21b9 (CURVE_FACTOR=1.15): export completed,
+2026-09-27T02:05:10Z INFO  [export] canary printed normally. Confirms the laptop tag, not main.
+2026-09-27T02:05:11Z INFO  [export] ticket OPS-2214 opened for the laptop reimage

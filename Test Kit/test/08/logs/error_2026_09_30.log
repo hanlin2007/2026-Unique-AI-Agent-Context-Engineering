@@ -1,0 +1,15 @@
+2026-09-30T02:19:41Z ERROR [capacity] nightly capacity report FAILED (tag v0.2.8-ops-hotfix, job #556)
+Traceback (most recent call last):
+  File "/opt/logwatch/scripts/nightly_capacity.py", line 74, in <module>
+    events, rejects = parse_log(path)
+  File "/opt/logwatch/src/parser.py", line 63, in parse_log
+    ev = parse_line(line)
+  File "/opt/logwatch/src/parser.py", line 49, in parse_line
+    dt = datetime.strptime(m["ts"], TS_FORMAT)
+ValueError: time data '30/Sep/2026:13:05:44' does not match format '%d/%b/%Y:%H:%M:%S %z'
+2026-09-30T02:19:41Z ERROR [capacity] NOTE: this trace is from the v0.2.8-ops-hotfix tag on the
+2026-09-30T02:19:41Z ERROR [capacity] NOTE: ops bastion; that tag's TS_FORMAT lacked the timezone
+2026-09-30T02:19:41Z ERROR [capacity] NOTE: offset. main has parsed offset-aware timestamps since
+2026-09-30T02:19:41Z ERROR [capacity] NOTE: v0.3.0. The bastion is being rebuilt 2026-10-20; do NOT
+2026-09-30T02:19:41Z ERROR [capacity] NOTE: chase this trace on main.
+2026-09-30T02:19:42Z INFO  [capacity] notification sent to #logwatch-ops

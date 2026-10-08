@@ -1,0 +1,22 @@
+TODO (scratch pad, not groomed)
+
+- [ ] issue #33: sessions land in wrong ISO weeks. m.petrova's
+      date-normalisation patch in fix_suggestion.md - second attempt in
+      flight (iso_week property this time). BLOCKING weekly email.
+      (note: v1 did NOT go green, logs/ci.log build #176 - d.osei
+      predicted this, said the patch keys off a start_time column we
+      do not have)
+- [ ] d.osei keeps saying "no date shift makes per-mile come out
+      smaller than per-km; look at the conversion direction and the
+      EMA alpha". Humoured, parked - the calendar-hardening release
+      touched the loader, not the maths. Occam's razor.
+- [ ] re-enable scripts/weekly_email.py once the suite is green
+      (coach wants the Monday email back)
+- [ ] issue #30: format_pace 59.5s edge case (cosmetic, backlog)
+- [x] v1.1.0 calendar hardening merged 2026-09-19
+- [ ] retire the hand-rolled CSV dialects note in onboarding - the
+      watch export has been stable since July
+- [ ] ask athlete to re-sync the watch clock before the next block;
+      holiday-time drift caused this whole #33 thread (probably)
+- [ ] shoe rotation: pair A crosses 600k mid-October at current
+      volume - order replacement before the next build phase

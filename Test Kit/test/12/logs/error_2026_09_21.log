@@ -1,0 +1,23 @@
+================================================================================
+bankrecon CI - captured stderr - 2026-09-21T02:05:17Z
+job: month-end  build: #528  ref: tags/v0.3.1  runner: ci-ubuntu-02
+================================================================================
+Traceback (most recent call last):
+  File "/home/ci/builds/bankrecon/v0.3.1/scripts/month_end.py", line 81, in <module>
+    report = build_recon_report(ledger_path, statement_path)
+  File "/home/ci/builds/bankrecon/v0.3.1/src/report.py", line 24, in build_recon_report
+    lines = load_statement(statement_path)
+  File "/home/ci/builds/bankrecon/v0.3.1/src/bank_io.py", line 39, in load_statement
+    amount = float(row["amount"])
+ValueError: could not convert string to float: '"1,245.00"'
+================================================================================
+NOTE (triage, 2026-09-21 07:44 UTC, n.achterberg):
+  This is the OLD bank format rearing its head one last time - the
+  v0.3.x parser met a quoted thousand-separator amount from a stale
+  export. The v0.4.0 rewrite removed the quoted-amount workaround
+  because the bank PROMISED the new format was stable. Two months
+  later the suite is red again with a suspiciously similar
+  signature. I rest my case: issue #51 is the same module, same
+  class of bug, new disguise. See KNOWN_ISSUES.md and
+  fix_suggestion.md.
+================================================================================

@@ -1,0 +1,37 @@
+2026-09-30T10:12:44.201Z DEBUG [report] argv=['python','-m','src.cli','report','data/submissions.csv','data/answer_key.csv']
+2026-09-30T10:12:44.203Z DEBUG [loader] key: 10 questions, points total 100
+2026-09-30T10:12:44.204Z DEBUG [loader] submissions: 120 rows, 12 students, 0 rejected
+2026-09-30T10:12:44.206Z DEBUG [key] S01 q01: student 'mitochondria' vs key 'mitochondria' -> full
+2026-09-30T10:12:44.206Z DEBUG [key] S01 q02: student 'd' vs key 'B' -> none
+2026-09-30T10:12:44.207Z DEBUG [key] S01 q05: student 'c' vs key 'A' -> none
+2026-09-30T10:12:44.207Z DEBUG [key] S01 q08: student 'a' vs key 'C' -> none
+2026-09-30T10:12:44.208Z DEBUG [key] S02 q02: student 'd' vs key 'B' -> none
+2026-09-30T10:12:44.208Z DEBUG [key] S02 q05: student 'a' vs key 'A' -> none
+2026-09-30T10:12:44.209Z DEBUG [key] S02 q08: student 'c' vs key 'C' -> none
+2026-09-30T10:12:44.209Z DEBUG [key] S02 q09: student 'salt' vs partial 'salt' -> partial
+2026-09-30T10:12:44.210Z DEBUG [key] ... 100 matches omitted ...
+2026-09-30T10:12:44.210Z DEBUG [key] S05 q02: student 'b' vs key 'B' -> none
+2026-09-30T10:12:44.211Z DEBUG [key] S05 q05: student 'a' vs key 'A' -> none
+2026-09-30T10:12:44.212Z DEBUG [key] S06 q05: student 'a' vs key 'A' -> none
+2026-09-30T10:12:44.213Z DEBUG [key] S08 q02: student 'b' vs key 'B' -> none
+2026-09-30T10:12:44.214Z DEBUG [key] S09 q02: student 'b' vs key 'B' -> none
+2026-09-30T10:12:44.215Z DEBUG [key] S10 q05: student 'a' vs key 'A' -> none
+2026-09-30T10:12:44.216Z DEBUG [key] S11 q01: student 'mitochondria' vs key 'mitochondria' -> full
+2026-09-30T10:12:44.217Z DEBUG [key] S11 q07: student 'quartz' vs key 'quartz' -> full
+2026-09-30T10:12:44.218Z DEBUG [key] S12 q05: student 'c' vs key 'A' -> none
+2026-09-30T10:12:44.219Z DEBUG [key] S12 q09: student 'sodium chlorate' vs key 'sodium chloride' -> none
+2026-09-30T10:12:44.220Z DEBUG [rubric] S02 q09 partial: 9/2=4.5 -> 4 pts
+2026-09-30T10:12:44.221Z DEBUG [rubric] S03 q03 partial: 9/2=4.5 -> 4 pts
+2026-09-30T10:12:44.221Z DEBUG [rubric] S04 q01 partial: 9/2=4.5 -> 4 pts
+2026-09-30T10:12:44.222Z DEBUG [rubric] S08 q03 partial: 9/2=4.5 -> 4 pts
+2026-09-30T10:12:44.222Z DEBUG [rubric] S08 q09 partial: 9/2=4.5 -> 4 pts
+2026-09-30T10:12:44.223Z DEBUG [rubric] S10 q07 partial: 9/2=4.5 -> 4 pts
+2026-09-30T10:12:44.224Z DEBUG [rubric] raw totals: S01=88.0 S02=83.0 S03=74.0 S04=63.0 S05=80.0 S06=67.0
+2026-09-30T10:12:44.225Z DEBUG [rubric] raw totals: S07=88.0 S08=78.0 S09=59.0 S10=67.0 S11=43.0 S12=51.0
+2026-09-30T10:12:44.226Z DEBUG [report] S01 raw=88.0 -> cap 88.0 -> curve 101.2 -> final 101.2
+2026-09-30T10:12:44.227Z DEBUG [report] S02 raw=83.0 -> cap 83.0 -> curve 95.45 -> final 95.45
+2026-09-30T10:12:44.227Z DEBUG [report] ... 8 students omitted ...
+2026-09-30T10:12:44.231Z DEBUG [report] S11 raw=43.0 -> cap 43.0 -> curve 49.45 -> final 49.45
+2026-09-30T10:12:44.232Z DEBUG [report] S12 raw=51.0 -> cap 51.0 -> curve 58.65 -> final 58.65
+2026-09-30T10:12:44.233Z DEBUG [report] class_average=80.6 top_score=101.2 pass_count=10
+2026-09-30T10:12:44.234Z DEBUG [report] done in 0.031s

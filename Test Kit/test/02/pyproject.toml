@@ -1,0 +1,8 @@
+[project]
+name = "clipnote"
+version = "0.6.2"
+description = "Index markdown notes and compute word, reading-time and vocabulary statistics"
+requires-python = ">=3.9"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

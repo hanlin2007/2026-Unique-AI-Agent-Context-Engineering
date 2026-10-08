@@ -1,0 +1,36 @@
+2026-09-25T22:09:41.882Z DEBUG [api.find_slots] calendar=data/calendar.csv day=2026-10-12 duration=45
+2026-09-25T22:09:41.883Z DEBUG [icsio.load_events] open data/calendar.csv newline='' encoding='utf-8'
+2026-09-25T22:09:41.884Z DEBUG [icsio.load_events] header=['person','day','start','end','title']
+2026-09-25T22:09:41.885Z DEBUG [icsio.load_events] kept 29 rows for day=2026-10-12
+2026-09-25T22:09:41.886Z DEBUG [api] scan 09:00..18:00 step=15 duration=45
+2026-09-25T22:09:41.887Z DEBUG [api] candidate 09:00-09:45: conflicts with 'standup' -> rejected
+2026-09-25T22:09:41.887Z DEBUG [api] candidate 09:15-10:00: conflicts with 'standup' -> rejected
+2026-09-25T22:09:41.888Z DEBUG [api] candidate 09:30-10:15: conflicts with 'infra sync' -> rejected
+2026-09-25T22:09:41.888Z DEBUG [api] candidate 09:45-10:30: conflicts with 'infra sync' -> rejected
+2026-09-25T22:09:41.889Z DEBUG [api] candidate 10:00-10:45: rejected by '1:1 with bruno' (09:45-10:00)
+2026-09-25T22:09:41.889Z DEBUG [api] candidate 10:15-11:00: no conflict -> KEPT
+2026-09-25T22:09:41.890Z DEBUG [api] candidate 10:30-11:15: no conflict -> KEPT
+2026-09-25T22:09:41.890Z DEBUG [api] candidate 10:45-11:30: rejected by 'design review' (11:30-12:30)
+2026-09-25T22:09:41.891Z DEBUG [api] candidate 11:00-11:45: conflicts with 'design review' -> rejected
+2026-09-25T22:09:41.892Z DEBUG [api] ... midday candidates ...
+2026-09-25T22:09:41.893Z DEBUG [api] candidate 12:30-13:15: rejected by 'budget sync' (11:45-12:30)
+2026-09-25T22:09:41.893Z DEBUG [api] candidate 12:45-13:30: no conflict -> KEPT
+2026-09-25T22:09:41.894Z DEBUG [api] candidate 13:00-13:45: no conflict -> KEPT
+2026-09-25T22:09:41.894Z DEBUG [api] candidate 13:15-14:00: rejected by 'sprint planning' (14:00-15:00)
+2026-09-25T22:09:41.895Z DEBUG [api] ... afternoon candidates ...
+2026-09-25T22:09:41.896Z DEBUG [api] candidate 15:00-15:45: rejected by 'status update' (14:45-15:00)
+2026-09-25T22:09:41.896Z DEBUG [api] candidate 15:15-16:00: no conflict -> KEPT
+2026-09-25T22:09:41.897Z DEBUG [api] candidate 15:30-16:15: no conflict -> KEPT
+2026-09-25T22:09:41.897Z DEBUG [api] candidate 15:45-16:30: rejected by 'customer call' (16:30-17:30)
+2026-09-25T22:09:41.898Z DEBUG [api] ... remaining candidates all conflict ...
+2026-09-25T22:09:41.899Z DEBUG [api] kept starts: [615, 630, 765, 780, 915, 930]
+2026-09-25T22:09:41.899Z DEBUG [merge] run [615,630] -> window (615, 675)
+2026-09-25T22:09:41.900Z DEBUG [merge] run [765,780] -> window (765, 825)
+2026-09-25T22:09:41.900Z DEBUG [merge] run [915,930] -> end of list, loop finished
+2026-09-25T22:09:41.901Z DEBUG [merge] windows emitted: 2
+2026-09-25T22:09:41.901Z DEBUG [api] slots: [{'start':'10:15','end':'11:15'}, {'start':'12:45','end':'13:45'}]
+2026-09-25T22:09:41.902Z DEBUG [api] done in 0.021s
+# triage note (k.osei, 2026-09-26): trace captured on main@b62e0a4.
+# 29 rows loaded for the day, which LOOKS right, but the emitted
+# windows still don't match the calendar. The boundary rejections
+# are the parser mistiming rows by a notch, has to be. See #33.

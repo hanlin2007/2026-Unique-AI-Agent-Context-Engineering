@@ -1,0 +1,31 @@
+2026-09-30T22:14:03.102Z DEBUG [cli] argv=['python', '-m', 'src.cli', 'report', 'data/expenses.csv', 'USD']
+2026-09-30T22:14:03.104Z DEBUG [ledger.load_expenses] open data/expenses.csv newline='' encoding='utf-8'
+2026-09-30T22:14:03.105Z DEBUG [ledger.load_expenses] header=['date','payer','amount','category','split_among','memo']
+2026-09-30T22:14:03.107Z DEBUG [ledger.load_expenses] row[0]={'date':'2026-06-28','payer':'anna','amount':'486',...}
+2026-09-30T22:14:03.107Z DEBUG [ledger.load_expenses] row[1]={'date':'2026-06-28','payer':'carla','amount':'168',...}
+2026-09-30T22:14:03.108Z DEBUG [ledger.load_expenses] ... 77 rows omitted ...
+2026-09-30T22:14:03.111Z DEBUG [ledger.load_expenses] parsed=81 rejected=0, stable sort by date ok
+2026-09-30T22:14:03.112Z DEBUG [split] expense[0] 486.0 over 6 -> 81.0 each, sum 486.0, drift 0.0
+2026-09-30T22:14:03.113Z DEBUG [split] expense[7] 38.2 over 3 -> 12.73 each, sum 38.19, drift 0.01
+2026-09-30T22:14:03.113Z DEBUG [split] expense[12] 72.8 over 6 -> 12.13 each, sum 72.78, drift 0.02
+2026-09-30T22:14:03.114Z DEBUG [split] expense[59] 18.7 over 3 -> 6.23 each, sum 18.69, drift 0.01
+2026-09-30T22:14:03.115Z DEBUG [split] ... 73 expenses omitted ...
+2026-09-30T22:14:03.117Z DEBUG [split] all 81 split, cumulative drift 0.87
+2026-09-30T22:14:03.119Z DEBUG [report] paid accumulation over rows 0..80
+2026-09-30T22:14:03.120Z DEBUG [report] paid: anna=1105.40 ben=591.30 carla=1635.50 dan=389.50 erin=1254.20 finn=986.94
+2026-09-30T22:14:03.121Z DEBUG [report] owed accumulation over rows 0..39 (half=40)
+2026-09-30T22:14:03.122Z DEBUG [report] owed: anna=548.65 ben=538.70 carla=520.77 dan=516.47 erin=545.75 finn=515.87
+2026-09-30T22:14:03.123Z DEBUG [report] balances: anna=+556.75 ben=+52.60 carla=+1114.73 dan=-126.97 erin=+708.45 finn=+471.07
+2026-09-30T22:14:03.124Z DEBUG [settle] iteration 1: creditor=carla(+1114.73) debtor=dan(-126.97)
+2026-09-30T22:14:03.125Z DEBUG [settle] record transfer from=carla to=dan amount=126.97
+2026-09-30T22:14:03.125Z DEBUG [settle] residual: carla=+987.76 dan=0.00
+2026-09-30T22:14:03.126Z DEBUG [settle] iteration 2: creditor=carla(+987.76) debtor=dan(0.00)
+2026-09-30T22:14:03.126Z DEBUG [settle] no debtor below -0.005, stop. transfers=1
+2026-09-30T22:14:03.127Z DEBUG [report] grand_total_eur: sum(shares)=5961.97 (sum(amounts)=5962.84)
+2026-09-30T22:14:03.128Z DEBUG [fx] build appendix: display=USD snapshot=2026-09-01
+2026-09-30T22:14:03.129Z DEBUG [fx.convert] amount=5961.97 src=EUR dst=USD
+2026-09-30T22:14:03.130Z DEBUG [fx.convert] eur=Decimal('5961.97')/Decimal('1.0')=Decimal('5961.97')
+2026-09-30T22:14:03.130Z DEBUG [fx.convert] out=Decimal('5961.97')*Decimal('1.0862')=Decimal('6475.891814')
+2026-09-30T22:14:03.131Z DEBUG [fx.round_to_minor] quantum=Decimal('0.01') ROUND_HALF_EVEN -> Decimal('6475.89')
+2026-09-30T22:14:03.132Z DEBUG [report] fx(USD): grand_total=6475.89
+2026-09-30T22:14:03.133Z DEBUG [cli] render settlement table

@@ -1,0 +1,61 @@
+================================================================================
+clipnote CI - captured stderr - 2026-09-25T02:14:11Z
+job: nightly-index  build: #415  ref: tags/v0.3.0  runner: ci-ubuntu-02
+================================================================================
+Traceback (most recent call last):
+  File "/home/ci/builds/clipnote/v0.3.0/scripts/build_index.py", line 41, in <module>
+    index = build_index(notes)
+  File "/home/ci/builds/clipnote/v0.3.0/src/search.py", line 27, in build_index
+    first = tokens[0]
+IndexError: list index out of range
+================================================================================
+NOTE (triage, 2026-09-25 09:02 UTC, Tom):
+  Old tag crash, kept for reference. v0.3.0's build_index assumed every
+  note yields at least one token and blew up on a note that was all
+  punctuation. Patched in v0.3.1. INCLUDED HERE because search.py is
+  once again the suspect for the red suite (issue #17) - same module,
+  different failure mode. Current theory: TOKEN_RE drops hyphenated /
+  apostrophised tokens. See KNOWN_ISSUES.md and fix_suggestion.md.
+================================================================================
+
+================================================================================
+clipnote CI - captured stderr - 2026-03-01T02:09:48Z
+job: nightly-index  build: #96  ref: tags/v0.2.0  runner: ci-ubuntu-01
+================================================================================
+Traceback (most recent call last):
+  File "/home/ci/builds/clipnote/v0.2.0/scripts/build_index.py", line 38, in <module>
+    index = build_index(notes)
+  File "/home/ci/builds/clipnote/v0.2.0/src/search.py", line 24, in build_index
+    index[token].append(note.title)
+KeyError: 'x'
+================================================================================
+NOTE (triage, 2026-03-01 08:12 UTC, Priya):
+  Even older crash, same file, v0.2.0 era: setdefault was missing on
+  the cold path. Long since fixed. search.py has a HISTORY here - three
+  incidents in eight months, all in the index/tokeniser path. When the
+  word counts went wrong after v0.6.0, this file was the first place we
+  looked and it remains the working theory (issue #17).
+================================================================================
+
+================================================================================
+clipnote CI - captured stdout tail - 2026-09-26T10:14:52Z
+job: unit-tests  build: #416  ref: fix/issue-17-tokenizer@2f88b1d
+================================================================================
+$ python -m pytest tests/test_task.py -q
+...F.F.F..                                                              [100%]
+=================================== FAILURES ===================================
+______________ test_word_count_hyphenated_compounds ______________
+assert 8 == 4
+______________ test_reading_time_rounds_up ______________
+assert 1 == 2
+______________ test_fixture_note_stats ______________
+assert 218 == 181
+3 failed, 5 passed in 0.05s
+================================================================================
+NOTE (triage, 2026-09-26 11:03 UTC, Tom):
+  Failure signature with the v1 patch applied. Counts still off on the
+  hyphen-heavy fixtures. My read: the single-optional-hyphen regex is
+  not enough, "state-of-the-art" style compounds still split. Iterating
+  towards allowing MULTIPLE internal hyphens in TOKEN_RE - the stats
+  consumers should see each compound exactly once.
+================================================================================

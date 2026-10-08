@@ -1,0 +1,34 @@
+2026-09-25T21:03:14.002Z DEBUG [cli] argv=['python', '-m', 'src.cli', 'summary', 'data/workouts.csv']
+2026-09-25T21:03:14.004Z DEBUG [loader.load_workouts] open data/workouts.csv newline='' encoding='utf-8'
+2026-09-25T21:03:14.005Z DEBUG [loader.load_workouts] header=['date','type','distance_km','duration_min','avg_hr','notes']
+2026-09-25T21:03:14.006Z DEBUG [loader.parse_row] row[0]={'date':'2026-07-27','type':'run','distance_km':'8.02',...}
+2026-09-25T21:03:14.006Z DEBUG [loader.parse_row] row[1]={'date':'2026-07-28','type':'run','distance_km':'6.11',...}
+2026-09-25T21:03:14.007Z DEBUG [loader.load_workouts] ... 59 rows omitted ...
+2026-09-25T21:03:14.009Z DEBUG [loader.load_workouts] parsed=63 rejected=0, stable sort by date ok
+2026-09-25T21:03:14.010Z DEBUG [loader] span first=2026-07-27 last=2026-09-27 days=63
+2026-09-25T21:03:14.011Z DEBUG [summarize] runs=52 rides=9 rest=2
+2026-09-25T21:03:14.012Z DEBUG [summarize] run_km=430.32 run_minutes=2292.6 ride_km=229.0
+2026-09-25T21:03:14.013Z DEBUG [weekly] 2026-W31: km=42.41 runs=5 minutes=226.8
+2026-09-25T21:03:14.013Z DEBUG [weekly] 2026-W32: km=51.82 runs=6 minutes=274.0
+2026-09-25T21:03:14.014Z DEBUG [weekly] ... 5 weeks omitted ...
+2026-09-25T21:03:14.016Z DEBUG [weekly] 2026-W38: km=42.7 runs=6 minutes=226.5
+2026-09-25T21:03:14.017Z DEBUG [weekly] 2026-W39: km=43.85 runs=6 minutes=236.9
+2026-09-25T21:03:14.018Z DEBUG [weekly] cross-check sum(weeks.km)=430.32 matches totals.run_km ok
+2026-09-25T21:03:14.019Z DEBUG [metrics.pace_per_km] 2026-W31: 226.8 / 42.41 = 5.348
+2026-09-25T21:03:14.019Z DEBUG [metrics.pace_per_km] 2026-W32: 274.0 / 51.82 = 5.288
+2026-09-25T21:03:14.020Z DEBUG [metrics.pace_per_km] ... 5 values omitted ...
+2026-09-25T21:03:14.022Z DEBUG [metrics.pace_per_km] 2026-W38: 226.5 / 42.7 = 5.304
+2026-09-25T21:03:14.023Z DEBUG [metrics.pace_per_km] 2026-W39: 236.9 / 43.85 = 5.403
+2026-09-25T21:03:14.024Z DEBUG [metrics.pace_per_mile] 2026-W31: pace_km=5.348 / KM_PER_MILE=1.60934 -> 3.323
+2026-09-25T21:03:14.024Z DEBUG [metrics.pace_per_mile] 2026-W32: pace_km=5.288 / KM_PER_MILE=1.60934 -> 3.286
+2026-09-25T21:03:14.025Z DEBUG [metrics.pace_per_mile] ... 5 values omitted ...
+2026-09-25T21:03:14.027Z DEBUG [metrics.pace_per_mile] 2026-W38: pace_km=5.304 / KM_PER_MILE=1.60934 -> 3.296
+2026-09-25T21:03:14.028Z DEBUG [metrics.pace_per_mile] 2026-W39: pace_km=5.403 / KM_PER_MILE=1.60934 -> 3.357
+2026-09-25T21:03:14.029Z DEBUG [metrics.pace_per_km] overall: 2292.6 / 430.32 = 5.328
+2026-09-25T21:03:14.029Z DEBUG [metrics.pace_per_mile] overall: pace_km=5.328 / KM_PER_MILE=1.60934 -> 3.31
+2026-09-25T21:03:14.030Z DEBUG [summarize] daily loads: 63 days, first=61.69 last=7.12
+2026-09-25T21:03:14.031Z DEBUG [trends.ema] window=7 alpha=0.285714 (2/window)
+2026-09-25T21:03:14.031Z DEBUG [trends.ema] ema[0]=61.69 ema[1]=57.012 ema[2]=55.339 ... 58 values omitted ...
+2026-09-25T21:03:14.032Z DEBUG [trends.ema] ema[60]=66.105 ema[61]=64.772 ema[62]=65.269
+2026-09-25T21:03:14.033Z DEBUG [trends.ema] final=65.269 peak=82.51 series_len=63
+2026-09-25T21:03:14.034Z DEBUG [cli] render summary table

@@ -1,0 +1,21 @@
+================================================================================
+textidx CI - captured stderr - 2026-09-20T02:11:52Z
+job: nightly-reindex  build: #407  ref: tags/v0.2.0  runner: ci-ubuntu-03
+================================================================================
+Traceback (most recent call last):
+  File "/home/ci/builds/textidx/v0.2.0/scripts/reindex.py", line 58, in <module>
+    stats = rebuild(docs_dir)
+  File "/home/ci/builds/textidx/v0.2.0/scripts/reindex.py", line 31, in rebuild
+    terms = tokenize(raw)
+  File "/home/ci/builds/textidx/v0.2.0/src/tokenizer.py", line 24, in tokenize
+    return [t for t in TERM_RE.findall(text.lower()) if len(t) >= 2]
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe2 in position 1141
+================================================================================
+NOTE (triage, 2026-09-20 07:58 UTC, a.novak):
+  Smart quote (U+2019) in one of the notes docs. Fixed on v0.2.1 by
+  forcing encoding="utf-8" at the IO edge - BUT the fact that the
+  tokenizer is where it blew up tells you the regex pipeline is doing
+  more than it should. I maintain the tokenizer needs a ground-up
+  review. This is the same module implicated in issue #21; see
+  KNOWN_ISSUES.md and fix_suggestion.md.
+================================================================================

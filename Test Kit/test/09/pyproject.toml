@@ -1,0 +1,8 @@
+[project]
+name = "recipescale"
+version = "0.4.2"
+description = "Bakery recipe scaling engine: unit conversion, baker's percentages, allergen and nutrition summaries"
+requires-python = ">=3.9"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

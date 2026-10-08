@@ -1,0 +1,12 @@
+# Agent 上下文工程项目依赖清单
+# Python 3.11 (conda env: agent)
+
+openai>=1.50.0      # OpenAI 兼容客户端（同时用于 Ollama /v1 与云端厂商）
+tiktoken>=0.8.0     # token 计数截断
+pytest>=8.0.0
+
+# while_loop.py 手写版不依赖以下包
+langchain>=1.0.0    # langchain_loop.py：create_agent
+langchain-ollama    # ChatOllama，接本地 Ollama
+langchain-openai    # ChatOpenAI，云端厂商备选
+langgraph>=1.0.0    # langgraph_loop.py：StateGraph 显式图      

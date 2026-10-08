@@ -1,0 +1,8 @@
+[project]
+name = "fittrack"
+version = "1.1.2"
+description = "Running log analysis: weekly volume, pace, and fitness trends from a workout CSV"
+requires-python = ">=3.9"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

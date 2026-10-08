@@ -1,0 +1,8 @@
+[project]
+name = "schedulex"
+version = "0.4.1"
+description = "Team meeting scheduler: finds free slots across a shared calendar CSV"
+requires-python = ">=3.9"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,29 @@
+TODO (scratch pad, not groomed)
+
+- [ ] issue #17: tokenizer drops words. Tom's patch in
+      fix_suggestion.md - review + apply + rerun suite. BLOCKING v0.7.
+      (note: branch fix/issue-17-tokenizer did NOT go green on the
+      first attempt, see logs/ci.log build #416 - Tom thinks the patch
+      needs the build_index ordering half too, see the proposal)
+- [ ] Anika keeps saying "read the style guide, stats defines words,
+      not search" - humoured her once, worth one more look only if
+      Tom's second patch also fails. The v0.6.0 refactor touched
+      search.py, not stats.py. Occam's razor.
+- [ ] retro action item: bi-weekly data-quality sync (Anika owns)
+- [ ] issue #14: ellipsis on truncated CLI titles (cosmetic, backlog)
+- [x] v0.6.2 docs: style guide published (2026-09-21)
+- [ ] decide: YAML front matter support? parked, needs a schema
+- [ ] corpus export for the knowledge-base pilot (due 2026-10-20)
+- [ ] sort_keys on the index JSON so nightly diffs are readable (#12)
+- [ ] prune the corpus: 4 files are skipped every nightly run for
+      being empty - either fill them or delete them (ask Priya)
+- [ ] renewal reminder: corpus share quota check before 2026-10-15
+- [ ] bench: is build_index fast enough for 10k notes? currently ~3s
+      for 218, fine until the pilot lands
+- [ ] onboarding: add a "your first bug" walkthrough once #17 is closed
+- [ ] ask infra whether the nightly runner can keep 30 days of index
+      JSON instead of 7 - useful when #17 regresses again
+- [ ] glossary page: "word" vs "token" vs "term" trips up every new
+      joiner; the style guide has the words, the wiki needs the summary
+- [ ] backfill the changelog: 0.1.x entries were reconstructed from
+      memory on 2026-09-28, spot-check against the old tags

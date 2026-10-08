@@ -1,0 +1,41 @@
+2026-09-24T09:00:10Z INFO  [ci] job unit-tests starting (build #289)
+2026-09-24T09:00:10Z INFO  [ci] checkout main@b62e0a4 -> /home/ci/builds/schedulex/main
+2026-09-24T09:00:11Z INFO  [ci] python 3.11.6, pytest 8.2.1
+2026-09-24T09:00:12Z INFO  [pytest] collected 8 items from tests/test_task.py
+2026-09-24T09:00:12Z INFO  [pytest] structure + boundary guards PASSED; day1/day2 slot cases FAILED
+2026-09-24T09:00:12Z INFO  [pytest] 4 failed, 4 passed in 0.03s
+2026-09-24T09:00:13Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-24T09:00:14Z INFO  [ci] notification sent to #schedulex-ci
+2026-09-25T09:00:09Z INFO  [ci] job unit-tests starting (build #291)
+2026-09-25T09:00:11Z INFO  [pytest] 4 failed, 4 passed in 0.03s
+2026-09-25T09:00:11Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-26T02:04:19Z INFO  [ci] job nightly-slots starting (build #292)
+2026-09-26T02:04:19Z INFO  [ci] checkout main@b62e0a4 -> /home/ci/builds/schedulex/main
+2026-09-26T02:04:20Z INFO  [slots] computing next-week proposals for team leads
+2026-09-26T02:04:21Z WARN  [slots] 2026-10-13: no slots found (team leads say 17:15 SHOULD be free)
+2026-09-26T02:04:21Z INFO  [ci] job nightly-slots finished in 2.1s
+2026-09-29T09:00:10Z INFO  [ci] job unit-tests starting (build #294)
+2026-09-29T09:00:12Z INFO  [pytest] 4 failed, 4 passed in 0.03s
+2026-09-29T09:00:12Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-02T09:00:11Z INFO  [ci] job unit-tests starting (build #297)
+2026-10-02T09:00:11Z INFO  [ci] checkout branch fix/issue-33-icsio-rows@9d2c771
+2026-10-02T09:00:13Z INFO  [pytest] 4 failed, 4 passed in 0.03s
+2026-10-02T09:00:13Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-02T09:00:14Z WARN  [ci] branch fix/issue-33-icsio-rows does NOT turn suite green
+2026-10-05T09:00:10Z INFO  [ci] job unit-tests starting (build #299)
+2026-10-05T09:00:12Z INFO  [pytest] 4 failed, 4 passed in 0.03s
+2026-10-05T09:00:12Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-06T02:04:11Z INFO  [ci] job nightly-slots starting (build #300)
+2026-10-06T02:04:11Z INFO  [ci] checkout main@b62e0a4 -> /home/ci/builds/schedulex/main
+2026-10-06T02:04:12Z INFO  [slots] computing next-week proposals for team leads
+2026-10-06T02:04:13Z WARN  [slots] 2026-10-13: no slots found (team leads say 17:15 SHOULD be free)
+2026-10-06T02:04:13Z INFO  [ci] job nightly-slots finished in 2.0s
+2026-10-06T09:00:10Z INFO  [ci] job unit-tests starting (build #301)
+2026-10-06T09:00:12Z INFO  [pytest] 4 failed, 4 passed in 0.03s
+2026-10-06T09:00:12Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-07T09:00:09Z INFO  [ci] job lint starting (build #302)
+2026-10-07T09:00:11Z INFO  [ruff] 0 errors, 1 warning (line length in scripts/)
+2026-10-07T09:00:11Z INFO  [ci] job lint finished: exit code 0
+2026-10-07T09:05:00Z INFO  [ci] job unit-tests starting (build #303)
+2026-10-07T09:05:02Z INFO  [pytest] 4 failed, 4 passed in 0.03s
+2026-10-07T09:05:02Z ERROR [ci] job unit-tests finished: exit code 1

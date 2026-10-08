@@ -1,0 +1,22 @@
+================================================================================
+ledgetool CI - captured stderr - 2026-09-30T02:14:07Z
+job: nightly-report  build: #1147  ref: tags/v0.2.3  runner: ci-ubuntu-04
+================================================================================
+Traceback (most recent call last):
+  File "/home/ci/builds/ledgetool/v0.2.3/scripts/generate_report.py", line 87, in <module>
+    appendix = build_fx_appendix(journal, display_currency="JPY")
+  File "/home/ci/builds/ledgetool/v0.2.3/scripts/generate_report.py", line 54, in build_fx_appendix
+    converted = convert_many(row["amount"] for row in totals)
+  File "/home/ci/builds/ledgetool/v0.2.3/src/currency.py", line 61, in convert_many
+    return [convert(a, src, dst) for a in amounts]
+  File "/home/ci/builds/ledgetool/v0.2.3/src/currency.py", line 48, in convert
+    return float(round_to_minor(out, dst))
+  File "/home/ci/builds/ledgetool/v0.2.3/src/currency.py", line 33, in round_to_minor
+    return amount.quantize(quantum, rounding=ROUND_HALF_EVEN)
+decimal.InvalidOperation: [<class 'decimal.Quantize'>]
+================================================================================
+NOTE (triage, 2026-09-30 09:41 UTC, m.okafor):
+  This is the same rounding drift class as issue #12 / #19 - currency.py
+  quantize path. Reproduces on the nightly FX appendix for JPY.
+  Recommend prioritising; see KNOWN_ISSUES.md #42 and fix_suggestion.md.
+================================================================================

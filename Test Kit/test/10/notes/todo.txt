@@ -1,0 +1,31 @@
+TODO (scratch pad, not groomed)
+
+- [ ] issue #21: tokenizer splits hyphen/apostrophe terms. a.novak's
+      patch in fix_suggestion.md - review + apply + REINDEX fixture +
+      rerun suite. BLOCKING the notes-archive rollout to the support
+      team.
+      (note: branch fix/issue-21-tokenizer-regex did NOT go green on
+      the first attempt, see logs/ci_pipeline.log build #414 -
+      a.novak says the fixture wasn't re-indexed, rerun with a clean
+      checkout before blaming the patch)
+- [ ] issue #19: CLI tie display order (cosmetic, backlog)
+- [ ] prune .txt~ editor backups from the notes share (see #14, the
+      reindex script filters them but the share is a mess)
+- [x] v0.3.0 df-definition cleanup signed off (2026-09-15) - index
+      and rank modules stable
+- [ ] decide: persist the index to disk? parked, see the "revisit"
+      section in docs/design.md - archive is at 7 docs, threshold is
+      5k
+- [ ] phrase queries - feature request from legal, needs positions
+      in the postings, no owner yet
+- [ ] write a proper perf smoke (build time vs doc count) before the
+      support-team rollout, they have ~800 notes
+- [ ] sweep the notes share for non-UTF-8 files before rollout (the
+      v0.2.0 smart-quote crash, issue #6, came from exactly one such
+      file; build_index deliberately refuses to guess encodings)
+- [ ] add the support team's three favourite queries to the reindex
+      probe list once they confirm them - probe coverage is only as
+      good as the probe list
+- [ ] schedule the post-bisect writeup whichever way Friday goes;
+      the last two red-suite episodes never got their postmortems
+      finished and the team keeps re-litigating them

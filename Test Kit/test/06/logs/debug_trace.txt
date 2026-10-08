@@ -1,0 +1,35 @@
+2026-09-29T11:42:03.101Z DEBUG [report] argv=['python','-m','src.cli','report','data/lots.csv','data/movements.csv']
+2026-09-29T11:42:03.103Z DEBUG [lots.load_lots] open data/lots.csv newline='' encoding='utf-8'
+2026-09-29T11:42:03.104Z DEBUG [lots.load_lots] parsed=40 lots, skus=8, warehouses=['main','annex']
+2026-09-29T11:42:03.106Z DEBUG [transfers.load_movements] parsed=66 movements (64 orders, 2 transfers), date-sorted ok
+2026-09-29T11:42:03.108Z DEBUG [pipeline] apply 2026-08-04 order SKU-A x20 @main
+2026-09-29T11:42:03.108Z DEBUG [lots.consume] SKU-A@main candidates in consumption order: LOT-005(20), LOT-004(20), LOT-003(40), LOT-002(100), LOT-001(100)
+2026-09-29T11:42:03.109Z DEBUG [lots.consume]  take 20 from LOT-005 -> LOT-005 left 0
+2026-09-29T11:42:03.110Z DEBUG [pipeline] apply 2026-08-05 order SKU-B x10 @main
+2026-09-29T11:42:03.110Z DEBUG [lots.consume] SKU-B@main candidates: LOT-010(40), LOT-009(30), LOT-008(30), LOT-007(30), LOT-006(30)
+2026-09-29T11:42:03.111Z DEBUG [lots.consume]  take 10 from LOT-010 -> LOT-010 left 30
+2026-09-29T11:42:03.112Z DEBUG [pipeline] ... 52 movements omitted ...
+2026-09-29T11:42:03.121Z DEBUG [pipeline] apply 2026-08-12 transfer SKU-D x10 main->annex (TRF-301)
+2026-09-29T11:42:03.121Z DEBUG [transfers] source candidates SKU-D@main: LOT-017(12), LOT-016(10), LOT-015(20)
+2026-09-29T11:42:03.122Z DEBUG [transfers]  staged 10 from LOT-017 -> annex pile LOT-017 qty=10 cost=6.20 recv=2026-07-28
+2026-09-29T11:42:03.122Z DEBUG [transfers]  destination append ok (annex SKU-D now 20)
+2026-09-29T11:42:03.123Z DEBUG [pipeline] ... 6 movements omitted ...
+2026-09-29T11:42:03.131Z DEBUG [pipeline] apply 2026-08-19 transfer SKU-G x8 annex->main (TRF-302)
+2026-09-29T11:42:03.131Z DEBUG [transfers]  staged 8 from LOT-033 -> main pile LOT-033 qty=8 cost=2.75 recv=2026-07-18
+2026-09-29T11:42:03.132Z DEBUG [transfers]  destination append ok (main SKU-G now 28)
+2026-09-29T11:42:03.133Z DEBUG [pipeline] ... 2 movements omitted ...
+2026-09-29T11:42:03.140Z DEBUG [lots.closing_quantities] SKU-D main=36 annex=12 (total 48)
+2026-09-29T11:42:03.141Z DEBUG [lots.closing_quantities] SKU-G main=28 annex=50 (total 78)
+2026-09-29T11:42:03.142Z DEBUG [lots.closing_quantities] grand units = 536
+2026-09-29T11:42:03.143Z DEBUG [reorder] SKU-A total=90 point=60 -> ok
+2026-09-29T11:42:03.143Z DEBUG [reorder] SKU-B total=60 point=50 -> ok
+2026-09-29T11:42:03.144Z DEBUG [reorder] SKU-C total=40 point=40 -> REORDER (total <= point)
+2026-09-29T11:42:03.144Z DEBUG [reorder] SKU-D total=48 point=25 -> ok
+2026-09-29T11:42:03.145Z DEBUG [reorder] SKU-E total=100 point=30 -> ok
+2026-09-29T11:42:03.145Z DEBUG [reorder] SKU-F total=30 point=45 -> REORDER (total <= point)
+2026-09-29T11:42:03.146Z DEBUG [reorder] SKU-G total=78 point=35 -> ok
+2026-09-29T11:42:03.146Z DEBUG [reorder] SKU-H total=90 point=20 -> ok
+2026-09-29T11:42:03.147Z DEBUG [valuation] SKU-A remaining: LOT-001(90 @1.20) -> value 108.00
+2026-09-29T11:42:03.148Z DEBUG [valuation] SKU-B remaining: LOT-006(30), LOT-007(30) @4.10 -> value 246.00
+2026-09-29T11:42:03.149Z DEBUG [valuation] grand total 5965.60 (quantize half-even ok)
+2026-09-29T11:42:03.150Z DEBUG [report] done in 0.049s

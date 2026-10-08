@@ -1,0 +1,43 @@
+date,ref,amount,description
+2026-09-02,BNK-0201,245.00,acquirer settlement
+2026-09-02,BNK-0202,180.50,acquirer settlement
+2026-09-03,BNK-0203,320.00,acquirer settlement
+2026-09-03,BNK-0204,500.00,internal transfer credit
+2026-09-06,BNK-0205,155.00,acquirer settlement
+2026-09-08,BNK-0206,275.25,acquirer settlement
+2026-09-08,BNK-0207,98.40,acquirer settlement
+2026-09-09,BNK-0208,-45.00,card refund debit
+2026-09-11,BNK-0209,410.00,acquirer settlement
+2026-09-12,BNK-0210,132.75,acquirer settlement
+2026-09-13,BNK-0211,260.00,acquirer settlement
+2026-09-14,BNK-0212,88.00,acquirer settlement
+2026-09-15,BNK-0213,210.50,acquirer settlement
+2026-09-15,BNK-0214,150.00,acquirer settlement
+2026-09-16,BNK-0215,305.00,acquirer settlement
+2026-09-16,BNK-0216,175.80,acquirer settlement
+2026-09-17,BNK-0217,250.00,internal transfer credit
+2026-09-17,BNK-0218,92.30,acquirer settlement
+2026-09-19,BNK-0219,445.00,acquirer settlement
+2026-09-19,BNK-0220,67.25,acquirer settlement
+2026-09-20,BNK-0221,230.00,acquirer settlement
+2026-09-22,BNK-0222,88.20,acquirer settlement
+2026-09-22,BNK-0223,195.00,acquirer settlement
+2026-09-22,BNK-0224,310.40,acquirer settlement
+2026-09-23,BNK-0225,124.60,acquirer settlement
+2026-09-23,BNK-0226,260.75,acquirer settlement
+2026-09-24,BNK-0227,-30.00,card refund debit
+2026-09-24,BNK-0228,400.00,acquirer settlement
+2026-09-25,BNK-0229,118.90,acquirer settlement
+2026-09-25,BNK-0230,285.00,acquirer settlement
+2026-09-26,BNK-0231,600.00,internal transfer credit
+2026-09-26,BNK-0232,76.20,acquirer settlement
+2026-09-27,BNK-0233,350.00,acquirer settlement
+2026-09-28,BNK-0234,142.00,acquirer settlement
+2026-09-29,BNK-0235,95.50,acquirer settlement
+2026-09-30,BNK-0236,380.25,acquirer settlement
+2026-09-30,BNK-0237,129.99,acquirer settlement
+2026-09-30,BNK-0238,265.00,acquirer settlement
+2026-09-30,BNK-0239,58.75,acquirer settlement
+2026-09-30,BNK-0240,175.00,internal transfer credit
+2026-09-30,BNK-0241,199.00,acquirer settlement
+2026-09-30,BNK-0242,3.10,interest credit

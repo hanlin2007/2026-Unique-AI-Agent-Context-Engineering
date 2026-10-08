@@ -1,0 +1,14 @@
+TODO (scratch pad, not groomed)
+
+- [ ] issue #42: currency rounding drift AGAIN. m.okafor's patch in
+      fix_suggestion.md - review + apply + rerun suite. BLOCKING RELEASE.
+      (note: branch fix/issue-42-currency-rounding did NOT go green on
+      the first attempt, see logs/app.log.1 build #1143 - probably the
+      patch needs its second half, ask m.okafor)
+- [ ] refresh rate table for Q4 (due 2026-10-15) - src/rates.py AND the
+      audit snapshot data/fx_rates_snapshot.csv
+- [ ] issue #38: CJK alignment in _render_table (cosmetic, backlog)
+- [ ] write onboarding doc for new intern (done, docs/onboarding.md)
+- [x] v0.5.0 pipeline split signed off (2026-09-20) - modules stable
+- [ ] decide: Decimal balances everywhere? parked, see docs/design.md
+- [ ] per-month interest breakdown (feature request from support)

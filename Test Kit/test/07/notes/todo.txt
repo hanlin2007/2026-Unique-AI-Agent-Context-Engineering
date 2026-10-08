@@ -1,0 +1,18 @@
+TODO (scratch pad, not groomed)
+
+- [ ] issue #63: finals shifted vs registrar. w.nakamura's patch in
+      fix_suggestion.md - review + apply + rerun suite. BLOCKING GRADE
+      SUBMISSION (deadline 2026-10-10).
+      (note: branch fix/issue-63-curve-double-apply did NOT go green on
+      the first attempt, see logs/app.log.1 build #991 - probably the
+      patch needs its second half, ask w.nakamura)
+- [ ] reimage department laptop (still on v0.5.3-registrar-hotfix,
+      source of that ZeroDivisionError trace in
+      logs/error_2026_09_27.log) - due 2026-10-12
+- [ ] issue #58: CLI column widths for 3-digit curved (cosmetic)
+- [ ] confirm Spring 2027 curve factor with the department (December)
+- [x] v0.6.0 policy split signed off (2026-09-12) - pipeline stable
+- [ ] decide: per-question stats in report? parked, see docs/design.md
+- [ ] book room for grading calibration session (2026-10-14)
+- [ ] renew registrar portal certificate (expires 2026-11-01)
+- [ ] TA training: how to read the debug trace (schedule with Priya)

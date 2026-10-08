@@ -1,0 +1,46 @@
+date,id,kind,amount,memo
+2026-09-01,L-0101,S,245.00,invoice 1041
+2026-09-01,L-0102,S,180.50,invoice 1042
+2026-09-02,L-0103,S,320.00,invoice 1043
+2026-09-03,L-0104,T,500.00,transfer from savings
+2026-09-05,L-0105,F,6.50,monthly account fee accrual
+2026-09-05,L-0106,S,155.00,walk-in sale
+2026-09-07,L-0107,S,275.25,invoice 1044
+2026-09-08,L-0108,S,98.40,card sale
+2026-09-09,L-0109,R,-45.00,refund inv 1038
+2026-09-10,L-0110,S,410.00,invoice 1045
+2026-09-11,L-0111,S,132.75,card sale
+2026-09-12,L-0112,S,260.00,invoice 1046
+2026-09-13,L-0113,S,88.00,card sale
+2026-09-14,L-0114,S,210.50,invoice 1047
+2026-09-14,L-0115,S,150.00,walk-in sale register A
+2026-09-14,L-0116,S,150.00,walk-in sale register B
+2026-09-15,L-0117,S,305.00,invoice 1048
+2026-09-15,L-0118,S,175.80,card sale
+2026-09-16,L-0119,T,250.00,transfer from savings
+2026-09-17,L-0120,S,92.30,card sale
+2026-09-18,L-0121,S,445.00,invoice 1049
+2026-09-18,L-0122,S,67.25,card sale
+2026-09-19,L-0123,F,6.50,monthly account fee accrual
+2026-09-19,L-0124,S,230.00,invoice 1050
+2026-09-20,L-0125,S,88.20,invoice 1051
+2026-09-21,L-0126,S,195.00,card sale
+2026-09-21,L-0127,S,310.40,invoice 1052
+2026-09-22,L-0128,S,124.60,card sale
+2026-09-22,L-0129,S,260.75,invoice 1053
+2026-09-23,L-0130,R,-30.00,refund inv 1044
+2026-09-23,L-0131,S,400.00,invoice 1054
+2026-09-24,L-0132,S,118.90,card sale
+2026-09-24,L-0133,S,285.00,invoice 1055
+2026-09-25,L-0134,T,600.00,owner injection
+2026-09-25,L-0135,S,76.20,card sale
+2026-09-26,L-0136,S,350.00,invoice 1056
+2026-09-27,L-0137,S,142.00,card sale
+2026-09-28,L-0138,S,210.00,invoice 1057
+2026-09-28,L-0139,S,95.50,card sale
+2026-09-29,L-0140,S,380.25,invoice 1058
+2026-09-29,L-0141,S,129.99,card sale
+2026-09-30,L-0142,S,265.00,invoice 1059
+2026-09-30,L-0143,S,58.75,card sale
+2026-09-30,L-0144,T,175.00,petty cash transfer
+2026-09-30,L-0145,S,199.00,invoice 1060

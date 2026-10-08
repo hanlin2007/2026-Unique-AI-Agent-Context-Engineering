@@ -1,0 +1,33 @@
+# Chess improvement plan
+
+Tactics before openings. Fifteen minutes of puzzles every morning
+beats an hour of memorised theory you will never reach on the board.
+
+The Thursday club runs a rapid ladder through the winter - fifteen
+minutes a side, no increment. Join it. Long games teach planning,
+but rapid games teach you to stop hanging pieces.
+
+Analyse your losses first and your wins second. The wins feel
+better, but the losses are where the rating points are hiding.
+
+Learn three endgames cold: king and pawn versus king, the Lucena
+position, and the basic rook mate. They show up far more often than
+the flashy middlegame sacrifices everyone studies instead.
+
+Openings: pick one system for white and one for black and play them
+for a year. Depth beats breadth until at least eighteen hundred.
+
+Write down your thought process during slow games, one line per
+move. Reviewing the notes a week later is uncomfortable and useful
+in exactly the right proportion.
+
+Blitz is dessert, not dinner. It is fine for pattern recognition,
+but it rewards habits you are trying to unlearn.
+
+Study your own games with an engine LAST. First pass: your own
+eyes, your own words. Second pass: a stronger clubmate if you can
+get one. The engine goes third, to catch what both of you missed -
+if it goes first, you learn nothing but awe.
+
+Keep a physical board by the desk. Moving the pieces by hand slows
+you down in exactly the way calculation practice needs.

@@ -1,0 +1,92 @@
+date,kind,amount,memo
+2025-09-01,deposit,300.00,initial
+2025-09-01,fee,4.90,acct fee
+2025-09-04,deposit,2650.00,salary
+2025-09-05,withdrawal,780.00,rent
+2025-09-07,withdrawal,41.10,groceries
+2025-09-11,payment,29.95,telekom
+2025-09-13,withdrawal,55.60,groceries
+2025-09-15,interest,0.71,interest
+2025-09-19,payment,24.90,gym
+2025-09-22,deposit,95.00,sale
+2025-09-23,withdrawal,36.70,household
+2025-09-27,payment,9.99,spotify
+2025-10-01,fee,4.90,acct fee
+2025-10-04,deposit,2650.00,salary
+2025-10-05,withdrawal,780.00,rent
+2025-10-07,withdrawal,38.60,groceries
+2025-10-08,refund,24.00,refund
+2025-10-11,payment,29.95,telekom
+2025-10-14,withdrawal,52.30,groceries
+2025-10-16,payment,36.00,transport
+2025-10-19,payment,24.90,gym
+2025-10-24,withdrawal,48.90,groceries
+2025-10-27,payment,9.99,spotify
+2025-11-01,fee,4.90,acct fee
+2025-11-01,withdrawal,12.40,coffee
+2025-11-04,deposit,2650.00,salary
+2025-11-05,withdrawal,780.00,rent
+2025-11-07,withdrawal,44.90,groceries
+2025-11-11,payment,29.95,telekom
+2025-11-15,withdrawal,39.61,groceries
+2025-11-19,payment,24.90,gym
+2025-11-22,withdrawal,61.75,groceries
+2025-11-24,deposit,120.00,freelance
+2025-11-27,payment,9.99,spotify
+2025-12-01,fee,4.90,acct fee
+2025-12-04,deposit,2650.00,salary
+2025-12-05,withdrawal,780.00,rent
+2025-12-07,withdrawal,55.20,groceries
+2025-12-11,payment,29.95,telekom
+2025-12-13,withdrawal,150.00,atm
+2025-12-15,interest,0.83,interest
+2025-12-17,withdrawal,44.90,groceries
+2025-12-19,payment,24.90,gym
+2025-12-24,deposit,200.00,bonus
+2025-12-27,payment,9.99,spotify
+2025-12-27,withdrawal,22.60,coffee
+2026-01-01,fee,4.90,acct fee
+2026-01-04,deposit,2650.00,salary
+2026-01-05,withdrawal,780.00,rent
+2026-01-07,withdrawal,49.60,groceries
+2026-01-11,payment,29.95,telekom
+2026-01-13,withdrawal,36.70,groceries
+2026-01-15,refund,59.99,refund
+2026-01-19,payment,24.90,gym
+2026-01-19,withdrawal,14.20,lunch
+2026-01-23,withdrawal,58.90,groceries
+2026-01-27,payment,9.99,spotify
+2026-02-01,fee,4.90,acct fee
+2026-02-04,deposit,2650.00,salary
+2026-02-05,withdrawal,780.00,rent
+2026-02-07,withdrawal,42.30,groceries
+2026-02-11,payment,29.95,telekom
+2026-02-13,withdrawal,51.10,groceries
+2026-02-16,payment,36.00,transport
+2026-02-19,payment,24.90,gym
+2026-02-22,withdrawal,47.80,groceries
+2026-02-27,payment,9.99,spotify
+2026-03-01,fee,4.90,acct fee
+2026-03-04,deposit,2650.00,salary
+2026-03-04,withdrawal,19.80,lunch
+2026-03-05,withdrawal,780.00,rent
+2026-03-07,withdrawal,53.40,groceries
+2026-03-11,payment,29.95,telekom
+2026-03-13,withdrawal,38.90,groceries
+2026-03-15,interest,0.95,interest
+2026-03-19,payment,24.90,gym
+2026-03-21,withdrawal,44.20,groceries
+2026-03-24,deposit,120.00,freelance
+2026-03-27,payment,9.99,spotify
+2026-03-27,withdrawal,15.30,coffee
+2026-04-01,fee,4.90,acct fee
+2026-04-04,deposit,2650.00,salary
+2026-04-05,withdrawal,780.00,rent
+2026-04-07,withdrawal,46.20,groceries
+2026-04-08,refund,33.50,refund
+2026-04-11,payment,29.95,telekom
+2026-04-14,withdrawal,57.80,groceries
+2026-04-19,payment,24.90,gym
+2026-04-19,withdrawal,12.60,lunch
+2026-04-23,withdrawal,41.50,groceries
+2026-04-27,payment,9.99,spotify

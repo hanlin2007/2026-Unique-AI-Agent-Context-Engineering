@@ -1,0 +1,14 @@
+2026-09-28T02:11:07Z ERROR [nightly] stocktake nightly snapshot FAILED (tag v0.3.1-old-hotfix, job #882)
+Traceback (most recent call last):
+  File "/opt/stocktake/scripts/nightly_snapshot.py", line 61, in <module>
+    canary = f"{total_value(lots):.2f}"
+  File "/opt/stocktake/src/valuation.py", line 47, in total_value
+    return _money(sum((lot_value(l) for l in lots if l.qty), Decimal(0)))
+  File "/opt/stocktake/src/valuation.py", line 24, in _money
+    return value.quantize(CENT, rounding=ROUND_HALF_EVEN)
+decimal.InvalidOperation: [<class 'decimal.ConversionSyntax'>]
+2026-09-28T02:11:07Z ERROR [nightly] NOTE: this trace is from the v0.3.1-old-hotfix tag kept on the
+2026-09-28T02:11:07Z ERROR [nightly] warehouse kiosk box; the accumulator there was still float-based.
+2026-09-28T02:11:07Z ERROR [nightly] main has been Decimal since v0.3.1 proper (issue #44). The kiosk
+2026-09-28T02:11:07Z ERROR [nightly] box is being retired 2026-10-15; do NOT chase this trace on main.
+2026-09-28T02:11:08Z INFO  [nightly] notification sent to #stocktake-ops

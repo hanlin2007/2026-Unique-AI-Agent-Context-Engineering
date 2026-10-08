@@ -1,0 +1,30 @@
+================================================================================
+recipescale CI - captured stderr - 2026-09-27T02:19:41Z
+job: nightly-batch  build: #775  ref: tags/v0.1.1  runner: ci-ubuntu-02
+================================================================================
+Traceback (most recent call last):
+  File "/home/ci/builds/recipescale/v0.1.1/scripts/batch_scale.py", line 74, in <module>
+    row = scale_one(recipe_path, loaves)
+  File "/home/ci/builds/recipescale/v0.1.1/scripts/batch_scale.py", line 41, in scale_one
+    kcal = estimate_kcal(grams)
+  File "/home/ci/builds/recipescale/v0.1.1/src/nutrition.py", line 52, in estimate_kcal
+    total += g * KCAL_PER_100G[name] / 100.0
+KeyError: 'malt powder'
+================================================================================
+NOTE (triage, 2026-09-27 08:02 UTC, h.tanaka):
+  Old tag crash, retired recipe (malt loaf was dropped in June). BUT
+  this is the same table-lookup path as issue #15 and, I would bet,
+  the current drift in #17 - the calorie table has never been
+  trustworthy for long. Recommend prioritising #17; see
+  KNOWN_ISSUES.md and fix_suggestion.md.
+
+NOTE 2 (2026-09-27 08:14 UTC, h.tanaka):
+  For the avoidance of doubt: the v0.1.1 crash is a KeyError on a
+  MISSING ingredient, not a wrong value. The #17 symptom is different
+  (values present but drifting). I am linking them because both live
+  in the same module and both trace back to table maintenance, not
+  because the failure modes are identical. If someone wants to argue
+  #17 is NOT the table, the argument has to explain why the drift is
+  so small - structural bugs move numbers by a lot, table drift moves
+  them by a little.
+================================================================================

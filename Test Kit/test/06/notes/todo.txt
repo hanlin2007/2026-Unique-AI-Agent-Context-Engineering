@@ -1,0 +1,16 @@
+TODO (scratch pad, not groomed)
+
+- [ ] issue #57: valuation drift vs ledger. t.almeida's patch in
+      fix_suggestion.md - review + apply + rerun suite. BLOCKING Q4 CLOSE.
+      (note: branch fix/issue-57-valuation-rounding did NOT go green on
+      the first attempt, see logs/app.log.1 build #1208 - probably the
+      patch needs its second half, ask t.almeida)
+- [ ] retire the warehouse kiosk box (still on v0.3.1-old-hotfix, it is
+      the source of that decimal.InvalidOperation trace in
+      logs/error_2026_09_28.log) - due 2026-10-15
+- [ ] issue #51: CLI column widths (cosmetic, backlog)
+- [ ] write onboarding doc for new intern (done, docs/onboarding.md)
+- [x] v0.4.0 lot-model rework signed off (2026-09-18) - pipeline stable
+- [ ] decide: per-warehouse reorder points? parked, see docs/design.md
+- [ ] FEFO consumption for perishables (feature request from ops)
+- [ ] cycle count reconciliation 2026-10-09 (second Friday)

@@ -1,0 +1,36 @@
+2026-09-19T21:14:33.204Z DEBUG [api.build_index] docs_dir=data/docs
+2026-09-19T21:14:33.205Z DEBUG [api.build_index] files=['astronomy.txt','chess.txt','cooking.txt','gardening.txt','hiking.txt','jazz.txt','python.txt']
+2026-09-19T21:14:33.207Z DEBUG [tokenizer] astronomy.txt -> 121 terms
+2026-09-19T21:14:33.207Z DEBUG [tokenizer] chess.txt -> 118 terms
+2026-09-19T21:14:33.208Z DEBUG [tokenizer] cooking.txt -> 126 terms
+2026-09-19T21:14:33.208Z DEBUG [tokenizer] gardening.txt -> 124 terms
+2026-09-19T21:14:33.209Z DEBUG [tokenizer] hiking.txt -> 125 terms
+2026-09-19T21:14:33.209Z DEBUG [tokenizer] jazz.txt -> 119 terms
+2026-09-19T21:14:33.210Z DEBUG [tokenizer] python.txt -> 120 terms
+2026-09-19T21:14:33.211Z DEBUG [index.build_postings] docs=7 unique_terms=512
+2026-09-19T21:14:33.212Z DEBUG [index.build_postings] df[water]=9 df[night]=5 df[sky]=3 df[club]=3
+2026-09-19T21:14:33.213Z DEBUG [api.search] query='water' terms=['water']
+2026-09-19T21:14:33.214Z DEBUG [rank] idf(water)=ln(1+7/9)=0.575
+2026-09-19T21:14:33.214Z DEBUG [rank] cooking: tf=4 -> 2.301
+2026-09-19T21:14:33.215Z DEBUG [rank] gardening: tf=3 -> 1.726
+2026-09-19T21:14:33.215Z DEBUG [rank] hiking: tf=2 -> 1.151
+2026-09-19T21:14:33.216Z DEBUG [rank] result order: [('hiking', 1.151), ('gardening', 1.726), ('cooking', 2.301)]
+2026-09-19T21:14:33.217Z DEBUG [api.search] query='night sky' terms=['night','sky']
+2026-09-19T21:14:33.218Z DEBUG [rank] idf(night)=ln(1+7/5)=0.875
+2026-09-19T21:14:33.218Z DEBUG [rank] idf(sky)=ln(1+7/3)=1.204
+2026-09-19T21:14:33.219Z DEBUG [rank] astronomy: 3*0.875 + 3*1.204 = 6.238
+2026-09-19T21:14:33.219Z DEBUG [rank] hiking: 1*0.875 = 0.875
+2026-09-19T21:14:33.220Z DEBUG [rank] jazz: 1*0.875 = 0.875
+2026-09-19T21:14:33.220Z DEBUG [rank] result order: [('hiking', 0.875), ('jazz', 0.875), ('astronomy', 6.238)]
+2026-09-19T21:14:33.221Z DEBUG [api.search] query='club' terms=['club']
+2026-09-19T21:14:33.222Z DEBUG [rank] idf(club)=ln(1+7/3)=1.204
+2026-09-19T21:14:33.222Z DEBUG [rank] result order: [('chess', 1.204), ('hiking', 1.204), ('jazz', 1.204)]
+2026-09-19T21:14:33.223Z DEBUG [api] done in 0.019s
+# triage note (a.novak, 2026-09-20): trace captured on main@8c14bb9.
+# Rankings are inverted vs what the docs team expects and scores are
+# depressed across the board. Consistent with #21 (fragment noise
+# drowning real terms). Tokenizer patch in review.
+# addendum (a.novak, 2026-09-21): s.petrov asked why df[water] prints
+# as 9 when there are 7 docs. Answer (I think): fragment inflation -
+# the split terms pile extra entries into the same df bucket. This is
+# what the patch fixes. The bisect will settle it if I'm wrong.

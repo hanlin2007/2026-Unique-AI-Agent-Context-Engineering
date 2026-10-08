@@ -1,0 +1,29 @@
+2026-10-01T11:02:44.301Z DEBUG [cli] argv=['python','-m','src.cli','summary','data/access.log']
+2026-10-01T11:02:44.303Z DEBUG [parser] open data/access.log encoding='utf-8'
+2026-10-01T11:02:44.305Z DEBUG [parser] line 1 ok: 13:02:11 GET /health 200 rt=0.004
+2026-10-01T11:02:44.306Z DEBUG [parser] line 2 ok: 13:09:44 GET / 200 rt=0.041 ref='https://shop.example.com/'
+2026-10-01T11:02:44.307Z DEBUG [parser] line 3 ok: 13:21:37 GET /api/items 200 rt=0.122
+2026-10-01T11:02:44.308Z DEBUG [parser] line 4 ok: 14:05:19 GET / 200 rt=0.038
+2026-10-01T11:02:44.309Z DEBUG [parser] line 5 ok: 14:12:33 GET /old-page 404 ref='https://shop.example.com/s?q=a,b'
+2026-10-01T11:02:44.310Z DEBUG [parser] ... 18 lines omitted ...
+2026-10-01T11:02:44.318Z DEBUG [parser] line 24 ok: 18:03:28 GET / 200 rt=0.042
+2026-10-01T11:02:44.319Z DEBUG [parser] parsed=26 rejected=0
+2026-10-01T11:02:44.320Z DEBUG [buckets] 13:02:11 -> bucket 2026-09-30T13:00
+2026-10-01T11:02:44.321Z DEBUG [buckets] 13:09:44 -> bucket 2026-09-30T13:00
+2026-10-01T11:02:44.322Z DEBUG [buckets] 14:27:58 -> bucket 2026-09-30T14:00
+2026-10-01T11:02:44.323Z DEBUG [buckets] 15:01:14 -> bucket 2026-09-30T15:00
+2026-10-01T11:02:44.324Z DEBUG [buckets] 15:11:29 -> bucket 2026-09-30T15:00
+2026-10-01T11:02:44.325Z DEBUG [buckets] 15:19:52 -> bucket 2026-09-30T15:00
+2026-10-01T11:02:44.326Z DEBUG [buckets] 15:25:03 -> bucket 2026-09-30T15:00
+2026-10-01T11:02:44.327Z DEBUG [buckets] 15:33:56 -> bucket 2026-09-30T16:00
+2026-10-01T11:02:44.328Z DEBUG [buckets] ... 13 assignments omitted ...
+2026-10-01T11:02:44.330Z DEBUG [buckets] 15:47:38 -> bucket 2026-09-30T16:00
+2026-10-01T11:02:44.331Z DEBUG [buckets] 15:58:04 -> bucket 2026-09-30T16:00
+2026-10-01T11:02:44.332Z DEBUG [buckets] 16:49:26 -> bucket 2026-09-30T17:00
+2026-10-01T11:02:44.333Z DEBUG [buckets] 17:51:22 -> bucket 2026-09-30T18:00
+2026-10-01T11:02:44.334Z DEBUG [buckets] hours: 13=3 14=4 15=4 16=6 17=4 18=5
+2026-10-01T11:02:44.335Z DEBUG [stats] rates: 2xx=0.8077 4xx=0.0769 5xx=0.1154 (n=26)
+2026-10-01T11:02:44.336Z DEBUG [stats] p50: n=26 rank=int(0.5*26)=13 -> xs[13]=0.098
+2026-10-01T11:02:44.337Z DEBUG [stats] p95: n=26 rank=int(0.95*26)=24 -> xs[24]=2.31
+2026-10-01T11:02:44.338Z DEBUG [stats] mean=0.366
+2026-10-01T11:02:44.339Z DEBUG [cli] done in 0.021s

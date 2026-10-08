@@ -1,0 +1,38 @@
+2026-09-26T22:41:07.552Z DEBUG [report] argv=['python', '-m', 'src.cli', 'show', 'data/recipes/sourdough.txt', '4']
+2026-09-26T22:41:07.554Z DEBUG [parser.parse_recipe] open data/recipes/sourdough.txt encoding='utf-8'
+2026-09-26T22:41:07.555Z DEBUG [parser.parse_recipe] header title='Classic Sourdough' base_loaves=1
+2026-09-26T22:41:07.557Z DEBUG [parser.parse_recipe] ... 6 ingredient rows read ...
+2026-09-26T22:41:07.558Z DEBUG [parser.parse_recipe] parsed=6 ingredients, ok
+2026-09-26T22:41:07.559Z DEBUG [scale] scale_factor = 4/1 = 4.0
+2026-09-26T22:41:07.560Z DEBUG [units.to_grams] strong bread flour: 2000.0 g -> 2000.0 g
+2026-09-26T22:41:07.560Z DEBUG [units.to_grams] whole wheat flour: 400.0 g -> 400.0 g
+2026-09-26T22:41:07.561Z DEBUG [units.to_grams] water: 1600.0 g -> 1600.0 g
+2026-09-26T22:41:07.561Z DEBUG [units.to_grams] sourdough starter: 480.0 g -> 480.0 g
+2026-09-26T22:41:07.562Z DEBUG [units.to_grams] sea salt: 44.0 g -> 44.0 g
+2026-09-26T22:41:07.562Z DEBUG [units.to_grams] honey: qty=4.0 tbsp -> 8.0 tsp -> 40.0 g
+2026-09-26T22:41:07.563Z DEBUG [scale] scaled_grams done: 6 entries, total 4564.0 g
+2026-09-26T22:41:07.564Z DEBUG [scale.bakers_percentages] basis=total_dough 4564.0 g
+2026-09-26T22:41:07.564Z DEBUG [scale.bakers_percentages] strong bread flour = 2000.0/4564.0 = 43.8
+2026-09-26T22:41:07.565Z DEBUG [scale.bakers_percentages] water = 1600.0/4564.0 = 35.1
+2026-09-26T22:41:07.566Z DEBUG [scale.bakers_percentages] sourdough starter = 480.0/4564.0 = 10.5
+2026-09-26T22:41:07.566Z DEBUG [scale.bakers_percentages] ... 3 more rows ...
+2026-09-26T22:41:07.568Z DEBUG [allergens] strong bread flour -> ['gluten', 'wheat']
+2026-09-26T22:41:07.568Z DEBUG [allergens] whole wheat flour -> ['gluten', 'wheat']
+2026-09-26T22:41:07.569Z DEBUG [allergens] water -> []
+2026-09-26T22:41:07.569Z DEBUG [allergens] sourdough starter -> ['gluten', 'wheat']
+2026-09-26T22:41:07.570Z DEBUG [allergens] sea salt -> []
+2026-09-26T22:41:07.570Z DEBUG [allergens] honey -> []
+2026-09-26T22:41:07.571Z DEBUG [allergens] occurrences: gluten seen 3x, wheat seen 3x
+2026-09-26T22:41:07.571Z DEBUG [allergens] summary={'gluten': 3, 'wheat': 3}
+2026-09-26T22:41:07.572Z DEBUG [nutrition.estimate_kcal] strong bread flour: 2000.0 g * 364.0/100 = 7280.0
+2026-09-26T22:41:07.572Z DEBUG [nutrition.estimate_kcal] whole wheat flour: 400.0 g * 339.0/100 = 1356.0
+2026-09-26T22:41:07.573Z DEBUG [nutrition.estimate_kcal] water: 1600.0 g * 0.0/100 = 0.0
+2026-09-26T22:41:07.573Z DEBUG [nutrition.estimate_kcal] sourdough starter: 480.0 g * 280.0/100 = 1344.0
+2026-09-26T22:41:07.574Z DEBUG [nutrition.estimate_kcal] sea salt: 44.0 g * 0.0/100 = 0.0
+2026-09-26T22:41:07.574Z DEBUG [nutrition.estimate_kcal] honey: 40.0 g * 304.0/100 = 121.6
+2026-09-26T22:41:07.575Z DEBUG [nutrition.estimate_kcal] running total = 10101.6
+2026-09-26T22:41:07.576Z DEBUG [report] nutrition: total_kcal=10101.6 kcal_per_loaf=2525.4 dough=4564.0
+2026-09-26T22:41:07.577Z DEBUG [report] done in 0.025s
+# triage note (h.tanaka, 2026-09-27): trace captured on main@3d9f21e.
+# kcal total already drifted vs the expected 10162.4 on the spec
+# sheet - consistent with issue #17. nutrition.py review scheduled.

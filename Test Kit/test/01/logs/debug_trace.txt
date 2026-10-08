@@ -1,0 +1,39 @@
+2026-09-30T02:14:03.112Z DEBUG [report] argv=['python', '-m', 'src.cli', 'report', 'data/journal_main.csv', 'JPY']
+2026-09-30T02:14:03.114Z DEBUG [journal.load_journal] open data/journal_main.csv newline='' encoding='utf-8'
+2026-09-30T02:14:03.115Z DEBUG [journal.load_journal] header=['date','kind','amount','memo']
+2026-09-30T02:14:03.118Z DEBUG [journal.load_journal] row[0]={'date':'2025-09-01','kind':'deposit','amount':'300.00','memo':'initial'}
+2026-09-30T02:14:03.118Z DEBUG [journal.load_journal] row[1]={'date':'2025-09-01','kind':'fee','amount':'4.90','memo':'acct fee'}
+2026-09-30T02:14:03.120Z DEBUG [journal.load_journal] ... 87 rows omitted ...
+2026-09-30T02:14:03.131Z DEBUG [journal.load_journal] parsed=92 rejected=0, stable sort by date ok
+2026-09-30T02:14:03.132Z DEBUG [normalize] KIND_MAP loaded: 6 raw kinds -> 2 canonical
+2026-09-30T02:14:03.133Z DEBUG [normalize] kind='deposit' -> canonical='deposit' sign=+1
+2026-09-30T02:14:03.133Z DEBUG [normalize] kind='fee' -> canonical='deposit' sign=+1
+2026-09-30T02:14:03.134Z DEBUG [normalize] kind='withdrawal' -> canonical='withdrawal' sign=-1
+2026-09-30T02:14:03.134Z DEBUG [normalize] kind='payment' -> canonical='withdrawal' sign=-1
+2026-09-30T02:14:03.135Z DEBUG [normalize] kind='refund' -> canonical='deposit' sign=+1
+2026-09-30T02:14:03.135Z DEBUG [normalize] kind='interest' -> canonical='deposit' sign=+1
+2026-09-30T02:14:03.136Z DEBUG [normalize] entries=92, order check ok
+2026-09-30T02:14:03.137Z DEBUG [daily] entry 2025-09-01 +300.00 -> balance 300.00
+2026-09-30T02:14:03.137Z DEBUG [daily] entry 2025-09-01 +4.90 -> balance 304.90
+2026-09-30T02:14:03.138Z DEBUG [daily] rollup 2025-09-01 closing=300.00
+2026-09-30T02:14:03.138Z DEBUG [daily] entry 2025-09-04 +2650.00 -> balance 2954.90
+2026-09-30T02:14:03.139Z DEBUG [daily] rollup 2025-09-04 closing=2954.90
+2026-09-30T02:14:03.139Z DEBUG [daily] entry 2025-09-05 -780.00 -> balance 2174.90
+2026-09-30T02:14:03.140Z DEBUG [daily] rollup 2025-09-05 closing=2174.90
+2026-09-30T02:14:03.141Z DEBUG [daily] ... 84 entries omitted ...
+2026-09-30T02:14:03.148Z DEBUG [daily] rollups done: 84 active days
+2026-09-30T02:14:03.149Z DEBUG [interest] annual_rate=0.0365 daily_factor=0.0001
+2026-09-30T02:14:03.149Z DEBUG [interest] day 2025-09-01: accrue on prev=0.00 -> +0.0000 (closing 300.00 carried)
+2026-09-30T02:14:03.150Z DEBUG [interest] day 2025-09-04: accrue on prev=300.00 -> +0.0300 (closing 2954.90 carried)
+2026-09-30T02:14:03.150Z DEBUG [interest] day 2025-09-05: accrue on prev=2954.90 -> +0.2955 (closing 2174.90 carried)
+2026-09-30T02:14:03.151Z DEBUG [interest] ... 81 days omitted ...
+2026-09-30T02:14:03.156Z DEBUG [interest] accrued total=65.30
+2026-09-30T02:14:03.157Z DEBUG [aggregate] months=8 (2025-09 .. 2026-04)
+2026-09-30T02:14:03.158Z DEBUG [report] grand: in=22194.18 out=8165.58 closing=14028.60
+2026-09-30T02:14:03.159Z DEBUG [fx] build appendix: display=JPY snapshot=2026-09-01
+2026-09-30T02:14:03.160Z DEBUG [currency.convert] amount=22194.18 src=USD dst=JPY
+2026-09-30T02:14:03.161Z DEBUG [currency.convert] out=Decimal('22194.18')*Decimal('149.35')=Decimal('3314700.783')
+2026-09-30T02:14:03.161Z DEBUG [currency.round_to_minor] quantum=Decimal('1') ROUND_HALF_EVEN -> Decimal('3314701')
+2026-09-30T02:14:03.162Z DEBUG [currency.convert] amount=8165.58 src=USD dst=JPY
+2026-09-30T02:14:03.162Z DEBUG [currency.round_to_minor] -> Decimal('1219529')
+2026-09-30T02:14:03.163Z DEBUG [report] fx(JPY): in=3314701 out=1219529

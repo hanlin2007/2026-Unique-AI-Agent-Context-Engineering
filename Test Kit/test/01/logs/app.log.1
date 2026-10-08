@@ -1,0 +1,46 @@
+2026-09-28T09:00:11Z INFO  [ci] job unit-tests starting (build #1139)
+2026-09-28T09:00:11Z INFO  [ci] checkout main@7b41ac0 -> /home/ci/builds/ledgetool/main
+2026-09-28T09:00:12Z INFO  [ci] python 3.11.6, pytest 8.2.1
+2026-09-28T09:00:13Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-09-28T09:00:13Z INFO  [pytest] tests/test_task.py::test_report_structure PASSED
+2026-09-28T09:00:13Z INFO  [pytest] tests/test_task.py::test_month_2025_03 FAILED
+2026-09-28T09:00:13Z INFO  [pytest] tests/test_task.py::test_month_2025_11 FAILED
+2026-09-28T09:00:13Z INFO  [pytest] tests/test_task.py::test_month_2026_01 FAILED
+2026-09-28T09:00:13Z INFO  [pytest] tests/test_task.py::test_active_days_2026_02 PASSED
+2026-09-28T09:00:13Z INFO  [pytest] tests/test_task.py::test_month_2026_03 FAILED
+2026-09-28T09:00:13Z INFO  [pytest] tests/test_task.py::test_month_2026_04 FAILED
+2026-09-28T09:00:13Z INFO  [pytest] tests/test_task.py::test_grand_totals FAILED
+2026-09-28T09:00:13Z INFO  [pytest] tests/test_task.py::test_interest_accrued FAILED
+2026-09-28T09:00:13Z INFO  [pytest] tests/test_task.py::test_fx_appendix_jpy FAILED
+2026-09-28T09:00:14Z INFO  [pytest] 8 failed, 2 passed in 0.05s
+2026-09-28T09:00:14Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-28T09:00:15Z INFO  [ci] notification sent to #ledgetool-ci
+2026-09-28T14:22:41Z INFO  [ci] job unit-tests starting (build #1140)
+2026-09-28T14:22:41Z INFO  [ci] checkout main@7b41ac0 -> /home/ci/builds/ledgetool/main
+2026-09-28T14:22:43Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-09-28T14:22:43Z INFO  [pytest] 8 failed, 2 passed in 0.04s
+2026-09-28T14:22:43Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-29T02:08:19Z INFO  [ci] job nightly-report starting (build #1141)
+2026-09-29T02:08:19Z INFO  [ci] checkout main@7b41ac0 -> /home/ci/builds/ledgetool/main
+2026-09-29T02:08:21Z INFO  [report] loading journal data/journal_main.csv
+2026-09-29T02:08:21Z INFO  [report] journal rows: 92 parsed, 0 rejected
+2026-09-29T02:08:22Z INFO  [report] building report via build_report(fx=JPY)
+2026-09-29T02:08:23Z INFO  [fx] converting grand totals at snapshot 2026-09-01
+2026-09-29T02:08:24Z INFO  [report] wrote /tmp/out/report_2026Q3.pdf (201 KB)
+2026-09-29T02:08:25Z INFO  [ci] job nightly-report finished in 6.6s
+2026-09-29T09:00:10Z INFO  [ci] job unit-tests starting (build #1142)
+2026-09-29T09:00:11Z INFO  [ci] checkout main@7b41ac0 -> /home/ci/builds/ledgetool/main
+2026-09-29T09:00:13Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-09-29T09:00:13Z INFO  [pytest] 8 failed, 2 passed in 0.05s
+2026-09-29T09:00:13Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-29T16:40:02Z INFO  [ci] job unit-tests starting (build #1143)
+2026-09-29T16:40:02Z INFO  [ci] checkout branch fix/issue-42-currency-rounding@a1b2c3d
+2026-09-29T16:40:04Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-09-29T16:40:04Z INFO  [pytest] 8 failed, 2 passed in 0.04s
+2026-09-29T16:40:04Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-29T16:40:05Z WARN  [ci] branch fix/issue-42-currency-rounding does NOT turn suite green
+2026-09-30T09:00:09Z INFO  [ci] job unit-tests starting (build #1146)
+2026-09-30T09:00:10Z INFO  [ci] checkout main@7b41ac0 -> /home/ci/builds/ledgetool/main
+2026-09-30T09:00:12Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-09-30T09:00:12Z INFO  [pytest] 8 failed, 2 passed in 0.05s
+2026-09-30T09:00:12Z ERROR [ci] job unit-tests finished: exit code 1

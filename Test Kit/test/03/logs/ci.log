@@ -1,0 +1,44 @@
+2026-09-20T09:12:01Z INFO  [ci] job unit-tests starting (build #288)
+2026-09-20T09:12:01Z INFO  [ci] checkout main@v1.3.0 -> /home/ci/builds/passpolicy/main
+2026-09-20T09:12:02Z INFO  [ci] python 3.11.6, pytest 8.2.1
+2026-09-20T09:12:03Z INFO  [pytest] collected 9 items from tests/test_task.py
+2026-09-20T09:12:03Z INFO  [pytest] tests/test_task.py::test_validate_strong_password PASSED
+2026-09-20T09:12:03Z INFO  [pytest] tests/test_task.py::test_validate_min_length_boundary FAILED
+2026-09-20T09:12:03Z INFO  [pytest] tests/test_task.py::test_is_compliant_min_length_boundary FAILED
+2026-09-20T09:12:03Z INFO  [pytest] tests/test_task.py::test_validate_too_short PASSED
+2026-09-20T09:12:03Z INFO  [pytest] tests/test_task.py::test_validate_underscore_special FAILED
+2026-09-20T09:12:03Z INFO  [pytest] tests/test_task.py::test_validate_missing_classes PASSED
+2026-09-20T09:12:03Z INFO  [pytest] tests/test_task.py::test_validate_blacklisted PASSED
+2026-09-20T09:12:03Z INFO  [pytest] tests/test_task.py::test_is_compliant_nine_chars PASSED
+2026-09-20T09:12:03Z INFO  [pytest] tests/test_task.py::test_meter_scores_and_labels PASSED
+2026-09-20T09:12:04Z INFO  [pytest] 3 failed, 6 passed in 0.03s
+2026-09-20T09:12:04Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-20T09:12:05Z INFO  [ci] notification sent to #passpolicy-ci
+2026-09-21T08:58:40Z INFO  [ci] job unit-tests starting (build #289)
+2026-09-21T08:58:40Z INFO  [ci] checkout main@3e9b21f -> /home/ci/builds/passpolicy/main
+2026-09-21T08:58:42Z INFO  [pytest] collected 9 items from tests/test_task.py
+2026-09-21T08:58:42Z INFO  [pytest] 3 failed, 6 passed in 0.03s
+2026-09-21T08:58:42Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-22T02:05:11Z INFO  [ci] job nightly-audit starting (build #290)
+2026-09-22T02:05:12Z INFO  [audit] loading candidate list (pilot feed, 5120 rows)
+2026-09-22T02:05:14Z INFO  [audit] 5120 candidates checked, 311 non-compliant (6.1%)
+2026-09-22T02:05:14Z INFO  [audit] top violation: min_length (178), needs_digit (121)
+2026-09-22T02:05:14Z INFO  [audit] wrote /tmp/out/audit_2026_09_22.csv (44 KB)
+2026-09-22T02:05:15Z INFO  [ci] job nightly-audit finished in 3.8s
+2026-09-23T02:05:09Z INFO  [ci] job nightly-audit starting (build #291)
+2026-09-23T02:05:11Z INFO  [audit] loading candidate list (pilot feed, 5144 rows)
+2026-09-23T02:05:13Z INFO  [audit] 5144 candidates checked, 309 non-compliant (6.0%)
+2026-09-23T02:05:13Z INFO  [audit] top violation: min_length (181), needs_digit (119)
+2026-09-23T02:05:13Z INFO  [audit] wrote /tmp/out/audit_2026_09_23.csv (44 KB)
+2026-09-23T02:05:13Z INFO  [ci] job nightly-audit finished in 3.6s
+2026-09-27T15:44:19Z INFO  [ci] job unit-tests starting (build #292)
+2026-09-27T15:44:19Z INFO  [ci] checkout fix/issue-29-blacklist-drift@7c1a9e0 -> /home/ci/builds/passpolicy/fix-29
+2026-09-27T15:44:21Z INFO  [pytest] collected 9 items from tests/test_task.py
+2026-09-27T15:44:21Z INFO  [pytest] 3 failed, 6 passed in 0.04s
+2026-09-27T15:44:21Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-27T15:44:22Z INFO  [ci] note: fix/issue-29-blacklist-drift did NOT go green (r.alvarez notified)
+2026-09-28T02:04:58Z INFO  [ci] job nightly-audit starting (build #293)
+2026-09-28T02:05:00Z INFO  [audit] loading candidate list (pilot feed, 5171 rows)
+2026-09-28T02:05:02Z INFO  [audit] 5171 candidates checked, 315 non-compliant (6.1%)
+2026-09-28T02:05:02Z INFO  [audit] wrote /tmp/out/audit_2026_09_28.csv (45 KB)
+2026-09-28T02:05:02Z INFO  [ci] job nightly-audit finished in 3.9s

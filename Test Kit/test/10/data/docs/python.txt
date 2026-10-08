@@ -1,0 +1,38 @@
+# Python notes - data structures
+
+Lists are for ordered collections you mutate; tuples are for records
+you pass around. If you find yourself indexing a tuple with bare
+integers in three places, promote it to a namedtuple.
+
+Dicts preserve insertion order and you should lean on that, not work
+around it. A dict of lists covers ninety percent of the "I need a
+database" moments in a script.
+
+Sets are criminally underused. Membership tests, deduplication, and
+the algebra operators (union, intersection, difference) replace
+whole loops with one readable line.
+
+Comprehensions are for transformations you can say out loud in one
+breath. If the comprehension needs a comment, it wants to be a for
+loop instead.
+
+Defaultdict is fine; Counter is better; both live in collections and
+both beat the setdefault dance you learned first.
+
+Sort with a key function, not a cmp. sorted(rows, key=lambda r:
+(r.status, -r.priority)) reads like the requirement it implements.
+
+Copying: assignment is a rename, not a copy. Shallow copies share
+the nested lists; deepcopy shares nothing but costs real time. Know
+which of the three you actually meant.
+
+Profile before optimising. The slow line is never the one you were
+staring at.
+
+Exceptions are for the exceptional. A parser that raises on every
+malformed line is a parser that cannot skip a bad record; return an
+errors list and let the caller decide.
+
+Read the standard library index once a year. Half the dependencies
+people reach for are already installed, better tested, and one
+import away.

@@ -1,0 +1,47 @@
+2026-09-22T08:31:02Z INFO  [ci] job unit-tests starting (build #412)
+2026-09-22T08:31:02Z INFO  [ci] checkout main@a91c3e7 -> /home/ci/builds/clipnote/main
+2026-09-22T08:31:03Z INFO  [ci] python 3.11.6, pytest 8.2.1
+2026-09-22T08:31:04Z INFO  [pytest] collected 8 items from tests/test_task.py
+2026-09-22T08:31:04Z INFO  [pytest] tests/test_task.py::test_word_count_plain PASSED
+2026-09-22T08:31:04Z INFO  [pytest] tests/test_task.py::test_word_count_empty_and_whitespace PASSED
+2026-09-22T08:31:04Z INFO  [pytest] tests/test_task.py::test_word_count_hyphenated_compounds FAILED
+2026-09-22T08:31:04Z INFO  [pytest] tests/test_task.py::test_reading_time_exact_multiples PASSED
+2026-09-22T08:31:04Z INFO  [pytest] tests/test_task.py::test_reading_time_rounds_up FAILED
+2026-09-22T08:31:04Z INFO  [pytest] tests/test_task.py::test_vocabulary_richness_plain PASSED
+2026-09-22T08:31:04Z INFO  [pytest] tests/test_task.py::test_search_ands_query_tokens PASSED
+2026-09-22T08:31:04Z INFO  [pytest] tests/test_task.py::test_fixture_note_stats FAILED
+2026-09-22T08:31:05Z INFO  [pytest] 3 failed, 5 passed in 0.04s
+2026-09-22T08:31:05Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-22T08:31:06Z INFO  [ci] notification sent to #clipnote-ci
+2026-09-23T09:02:44Z INFO  [ci] job unit-tests starting (build #413)
+2026-09-23T09:02:44Z INFO  [ci] checkout main@a91c3e7 -> /home/ci/builds/clipnote/main
+2026-09-23T09:02:45Z INFO  [pytest] collected 8 items from tests/test_task.py
+2026-09-23T09:02:45Z INFO  [pytest] 3 failed, 5 passed in 0.04s
+2026-09-23T09:02:45Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-24T02:11:19Z INFO  [ci] job nightly-index starting (build #414)
+2026-09-24T02:11:19Z INFO  [ci] checkout main@a91c3e7 -> /home/ci/builds/clipnote/main
+2026-09-24T02:11:20Z INFO  [index] scanning ~/corpus/notes (214 files)
+2026-09-24T02:11:22Z INFO  [index] tokens: 18433 unique, 4 skipped files (empty)
+2026-09-24T02:11:22Z INFO  [index] wrote /tmp/out/index_2026_09_24.json (812 KB)
+2026-09-24T02:11:22Z INFO  [ci] job nightly-index finished in 3.4s
+2026-09-26T10:14:37Z INFO  [ci] job unit-tests starting (build #416)
+2026-09-26T10:14:37Z INFO  [ci] checkout fix/issue-17-tokenizer@2f88b1d -> /home/ci/builds/clipnote/fix-17
+2026-09-26T10:14:38Z INFO  [pytest] collected 8 items from tests/test_task.py
+2026-09-26T10:14:38Z INFO  [pytest] 3 failed, 5 passed in 0.05s
+2026-09-26T10:14:38Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-26T10:14:39Z INFO  [ci] note: fix/issue-17-tokenizer did NOT go green (Tom notified)
+2026-09-27T02:12:01Z INFO  [ci] job nightly-index starting (build #417)
+2026-09-27T02:12:02Z INFO  [index] scanning ~/corpus/notes (216 files)
+2026-09-27T02:12:04Z INFO  [index] tokens: 18496 unique, 4 skipped files (empty)
+2026-09-27T02:12:04Z INFO  [index] wrote /tmp/out/index_2026_09_27.json (813 KB)
+2026-09-27T02:12:04Z INFO  [ci] job nightly-index finished in 3.1s
+2026-09-28T02:13:12Z INFO  [ci] job nightly-index starting (build #418)
+2026-09-28T02:13:13Z INFO  [index] scanning ~/corpus/notes (217 files)
+2026-09-28T02:13:15Z INFO  [index] tokens: 18512 unique, 4 skipped files (empty)
+2026-09-28T02:13:15Z INFO  [index] wrote /tmp/out/index_2026_09_28.json (815 KB)
+2026-09-28T02:13:15Z INFO  [ci] job nightly-index finished in 3.3s
+2026-09-28T11:40:26Z INFO  [ci] job unit-tests starting (build #419)
+2026-09-28T11:40:26Z INFO  [ci] checkout fix/issue-17-tokenizer@71d0a2c -> /home/ci/builds/clipnote/fix-17
+2026-09-28T11:40:28Z INFO  [pytest] collected 8 items from tests/test_task.py
+2026-09-28T11:40:28Z INFO  [pytest] 3 failed, 5 passed in 0.04s
+2026-09-28T11:40:28Z ERROR [ci] job unit-tests finished: exit code 1

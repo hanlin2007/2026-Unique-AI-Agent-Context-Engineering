@@ -1,0 +1,121 @@
+student_id,question_id,answer
+S01,q01,mitochondria
+S01,q02,d
+S01,q03,photosynthesis
+S01,q04,Isaac Newton
+S01,q05,c
+S01,q06,delta
+S01,q07,quartz
+S01,q08,a
+S01,q09,sodium chloride
+S01,q10,1789
+S02,q01,Mitochondria
+S02,q02,d
+S02,q03,Photosynthesis
+S02,q04,isaac newton
+S02,q05,a
+S02,q06,Delta
+S02,q07,Quartz
+S02,q08,c
+S02,q09,salt
+S02,q10,1789
+S03,q01,mitochondria
+S03,q02,b
+S03,q03,photosyntesis
+S03,q04,ISAAC NEWTON
+S03,q05,A
+S03,q06,delta
+S03,q07,feldspar
+S03,q08, C
+S03,q09,Sodium Chloride
+S03,q10,1789
+S04,q01,mitochondrion
+S04,q02,B
+S04,q03,photosynthesis
+S04,q04,Isaac Newton
+S04,q05,c
+S04,q06,Delta
+S04,q07,quartz
+S04,q08,c
+S04,q09,sodium chloride
+S04,q10,1804
+S05,q01,MITOCHONDRIA
+S05,q02, b
+S05,q03,photosynthesis
+S05,q04,newton
+S05,q05,a
+S05,q06,delta
+S05,q07,Quartz
+S05,q08,a
+S05,q09,sodium chloride
+S05,q10, 1789
+S06,q01,mitochondria
+S06,q02,b
+S06,q03,Photosynthesis
+S06,q04,Isaac Newton
+S06,q05,A
+S06,q06,estuary
+S06,q07,quartz
+S06,q08,c
+S06,q09,salt
+S06,q10,1789
+S07,q01,Mitochondria
+S07,q02,d
+S07,q03,photosynthesis
+S07,q04,isaac newton
+S07,q05,c
+S07,q06,Delta
+S07,q07,quartz
+S07,q08,a
+S07,q09,Sodium Chloride
+S07,q10,1789
+S08,q01,mitochondria
+S08,q02,B
+S08,q03,photosyntesis
+S08,q04,Isaac Newton
+S08,q05,a
+S08,q06,delta
+S08,q07,Quartz
+S08,q08,c
+S08,q09,salt
+S08,q10,1789
+S09,q01,nucleus
+S09,q02,b
+S09,q03,photosynthesis
+S09,q04,isaac newton
+S09,q05,A
+S09,q06,Delta
+S09,q07,quartz
+S09,q08, C
+S09,q09,sodium chloride
+S09,q10,1804
+S10,q01,MITOCHONDRIA
+S10,q02, b
+S10,q03,Photosynthesis
+S10,q04,galileo
+S10,q05,a
+S10,q06,delta
+S10,q07,quarts
+S10,q08,c
+S10,q09,Sodium Chloride
+S10,q10,1789
+S11,q01,mitochondria
+S11,q02,d
+S11,q03,respiration
+S11,q04,Isaac Newton
+S11,q05,c
+S11,q06,estuary
+S11,q07,quartz
+S11,q08,a
+S11,q09,sodium chloride
+S11,q10,1804
+S12,q01,Mitochondria
+S12,q02,b
+S12,q03,photosynthesis
+S12,q04,newton
+S12,q05,c
+S12,q06,Delta
+S12,q07,Quartz
+S12,q08,c
+S12,q09,sodium chlorate
+S12,q10,1804

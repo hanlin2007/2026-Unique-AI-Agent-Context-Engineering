@@ -1,0 +1,16 @@
+# Rich brioche dough, weekend batch.
+# Egg-heavy; keep cold butter cubed. Quantities per single loaf tin.
+# Note: whole milk is weighed in ml here on purpose - the unit table
+# treats ml as water-density grams, which is fine for milk.
+
+title: Brioche (rich dough)
+base_loaves: 1
+--
+bread flour | 500 | g
+eggs | 250 | g
+unsalted butter | 250 | g
+whole milk | 60 | ml
+sugar | 60 | g
+instant yeast | 8 | g
+fine salt | 9 | g
+honey | 1 | tbsp

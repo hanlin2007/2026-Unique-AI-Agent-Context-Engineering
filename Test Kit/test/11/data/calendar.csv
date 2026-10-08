@@ -1,0 +1,52 @@
+person,day,start,end,title
+ana,2026-10-12,09:00,09:45,standup
+ana,2026-10-12,09:45,10:00,1:1 with bruno
+ana,2026-10-12,11:30,12:30,design review
+ana,2026-10-12,11:45,12:00,slide review
+ana,2026-10-12,14:00,15:00,sprint planning
+ana,2026-10-12,14:30,14:45,action items
+ana,2026-10-12,16:30,17:30,customer call
+bruno,2026-10-12,09:00,09:30,infra sync
+bruno,2026-10-12,09:00,09:15,pager review
+bruno,2026-10-12,09:30,10:00,deploy window
+bruno,2026-10-12,11:30,12:15,code review
+bruno,2026-10-12,12:15,12:30,incident retro
+bruno,2026-10-12,14:00,14:45,vendor call
+bruno,2026-10-12,14:45,15:00,status update
+bruno,2026-10-12,16:30,17:30,oncall handover
+bruno,2026-10-12,16:45,17:00,alert tuning
+celia,2026-10-12,09:15,10:00,finance review
+celia,2026-10-12,09:30,09:45,approval queue
+celia,2026-10-12,11:45,12:30,budget sync
+celia,2026-10-12,14:00,15:00,hiring panel
+celia,2026-10-12,16:45,17:30,board prep
+dario,2026-10-12,09:00,09:30,qa standup
+dario,2026-10-12,09:30,10:00,test triage
+dario,2026-10-12,11:30,12:00,release check
+dario,2026-10-12,12:00,12:30,automation demo
+dario,2026-10-12,14:00,14:15,env check
+dario,2026-10-12,14:15,15:00,perf review
+dario,2026-10-12,16:30,17:00,security review
+dario,2026-10-12,17:00,17:30,log triage
+ana,2026-10-13,09:00,10:30,workshop
+ana,2026-10-13,10:30,12:00,client demo
+ana,2026-10-13,11:00,11:15,demo debrief
+ana,2026-10-13,13:00,15:00,roadmap
+ana,2026-10-13,15:00,16:30,team 1:1s
+ana,2026-10-13,16:30,17:15,wrap-up
+bruno,2026-10-13,09:00,11:00,migration
+bruno,2026-10-13,11:00,12:00,postmortem
+bruno,2026-10-13,13:30,15:30,database upgrade
+bruno,2026-10-13,14:00,14:15,backup verify
+bruno,2026-10-13,15:30,16:45,failover test
+celia,2026-10-13,09:30,11:30,audit prep
+celia,2026-10-13,10:00,10:15,expense sign-off
+celia,2026-10-13,12:00,13:00,partner call
+celia,2026-10-13,14:00,15:00,budget review
+celia,2026-10-13,15:30,17:00,forecast sync
+dario,2026-10-13,09:15,10:45,regression triage
+dario,2026-10-13,11:00,12:00,release notes
+dario,2026-10-13,13:00,14:30,qa sync
+dario,2026-10-13,14:30,16:00,automation review
+dario,2026-10-13,15:00,15:15,device lab
+dario,2026-10-13,16:00,17:15,bug bash

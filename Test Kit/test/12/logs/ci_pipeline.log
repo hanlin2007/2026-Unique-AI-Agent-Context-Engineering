@@ -1,0 +1,43 @@
+2026-09-26T09:00:10Z INFO  [ci] job unit-tests starting (build #531)
+2026-09-26T09:00:10Z INFO  [ci] checkout main@4a77c20 -> /home/ci/builds/bankrecon/main
+2026-09-26T09:00:11Z INFO  [ci] python 3.11.6, pytest 8.2.1
+2026-09-26T09:00:12Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-09-26T09:00:12Z INFO  [pytest] structure + ledger_rows + matched PASSED; lists/totals/dup FAILED
+2026-09-26T09:00:12Z INFO  [pytest] 7 failed, 3 passed in 0.04s
+2026-09-26T09:00:13Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-26T09:00:14Z INFO  [ci] notification sent to #bankrecon-ci
+2026-09-28T09:00:09Z INFO  [ci] job unit-tests starting (build #533)
+2026-09-28T09:00:11Z INFO  [pytest] 7 failed, 3 passed in 0.04s
+2026-09-28T09:00:11Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-30T02:03:55Z INFO  [ci] job month-end starting (build #535)
+2026-09-30T02:03:55Z INFO  [ci] checkout main@4a77c20 -> /home/ci/builds/bankrecon/main
+2026-09-30T02:03:57Z INFO  [month_end] archiving September run with input hashes
+2026-09-30T02:03:58Z WARN  [month_end] 4 ledger exceptions, 2 statement exceptions, duplicates=1
+2026-09-30T02:03:58Z WARN  [month_end] duplicates != 0 - finance ops alerted (policy: healthy=0)
+2026-09-30T02:03:59Z INFO  [ci] job month-end finished in 3.4s
+2026-10-01T09:00:10Z INFO  [ci] job unit-tests starting (build #536)
+2026-10-01T09:00:12Z INFO  [pytest] 7 failed, 3 passed in 0.04s
+2026-10-01T09:00:12Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-02T09:00:11Z INFO  [ci] job unit-tests starting (build #538)
+2026-10-02T09:00:11Z INFO  [ci] checkout branch fix/issue-51-csv-dialect@e02b9ac
+2026-10-02T09:00:13Z INFO  [pytest] 7 failed, 3 passed in 0.04s
+2026-10-02T09:00:13Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-02T09:00:14Z WARN  [ci] branch fix/issue-51-csv-dialect does NOT turn suite green
+2026-10-05T09:00:10Z INFO  [ci] job unit-tests starting (build #540)
+2026-10-05T09:00:12Z INFO  [pytest] 7 failed, 3 passed in 0.04s
+2026-10-05T09:00:12Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-06T09:00:09Z INFO  [ci] job unit-tests starting (build #541)
+2026-10-06T09:00:11Z INFO  [pytest] 7 failed, 3 passed in 0.04s
+2026-10-06T09:00:11Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-07T02:03:41Z INFO  [ci] job month-end-dryrun starting (build #542)
+2026-10-07T02:03:41Z INFO  [ci] checkout main@4a77c20 -> /home/ci/builds/bankrecon/main
+2026-10-07T02:03:43Z INFO  [month_end] archiving September run with input hashes
+2026-10-07T02:03:44Z WARN  [month_end] 4 ledger exceptions, 2 statement exceptions, duplicates=1
+2026-10-07T02:03:44Z WARN  [month_end] duplicates != 0 - finance ops alerted (policy: healthy=0)
+2026-10-07T02:03:45Z INFO  [ci] job month-end-dryrun finished in 3.1s
+2026-10-07T09:00:10Z INFO  [ci] job unit-tests starting (build #543)
+2026-10-07T09:00:12Z INFO  [pytest] 7 failed, 3 passed in 0.04s
+2026-10-07T09:00:12Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-07T09:05:00Z INFO  [ci] job lint starting (build #544)
+2026-10-07T09:05:02Z INFO  [ruff] 0 errors, 0 warnings
+2026-10-07T09:05:02Z INFO  [ci] job lint finished: exit code 0

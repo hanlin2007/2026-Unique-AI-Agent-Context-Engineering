@@ -1,0 +1,14 @@
+# Classic sourdough, bakery base recipe.
+# Format: ingredient | qty | unit   (see docs/data_dictionary.md)
+# This is the reference recipe used by the test suite and the
+# nightly batch job; keep quantities realistic, not "nice".
+
+title: Classic Sourdough
+base_loaves: 1
+--
+strong bread flour | 500 | g
+whole wheat flour | 100 | g
+water | 400 | g
+sourdough starter | 120 | g
+sea salt | 11 | g
+honey | 1 | tbsp

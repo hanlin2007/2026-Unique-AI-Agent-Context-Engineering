@@ -1,0 +1,8 @@
+[project]
+name = "bankrecon"
+version = "0.4.1"
+description = "Bank statement reconciliation: matches an internal ledger against the bank's statement within a value-date window"
+requires-python = ">=3.9"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

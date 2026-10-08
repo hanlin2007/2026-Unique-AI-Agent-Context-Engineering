@@ -1,0 +1,21 @@
+================================================================================
+schedulex CI - captured stderr - 2026-09-22T02:03:44Z
+job: nightly-slots  build: #287  ref: tags/v0.1.2  runner: ci-ubuntu-01
+================================================================================
+Traceback (most recent call last):
+  File "/home/ci/builds/schedulex/v0.1.2/scripts/propose_week.py", line 63, in <module>
+    slots = propose(calendar_path, day, minutes=45)
+  File "/home/ci/builds/schedulex/v0.1.2/scripts/propose_week.py", line 29, in propose
+    events = load_events(calendar_path, day)
+  File "/home/ci/builds/schedulex/v0.1.2/src/icsio.py", line 31, in load_events
+    person, day_s, start_s, end_s, title = line.split(",")
+ValueError: not enough values to unpack (expected 5, got 1)
+================================================================================
+NOTE (triage, 2026-09-22 08:15 UTC, k.osei):
+  The v0.1.x hand-rolled parser chokes on the blank line the ops
+  export tool puts between day blocks. This is the SAME module now
+  implicated in issue #33 (the v0.4.0 DictReader rewrite was
+  supposed to fix this class of thing and plainly did not). The CSV
+  edge of this project has never been healthy. Recommend
+  prioritising #33; see KNOWN_ISSUES.md and fix_suggestion.md.
+================================================================================

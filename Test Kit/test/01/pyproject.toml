@@ -1,0 +1,8 @@
+[project]
+name = "ledgetool"
+version = "0.5.1"
+description = "Tiny single-account ledger library: rollups, monthly summaries, interest, FX reporting"
+requires-python = ">=3.9"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

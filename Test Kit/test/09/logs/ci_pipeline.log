@@ -1,0 +1,45 @@
+2026-09-25T09:00:10Z INFO  [ci] job unit-tests starting (build #771)
+2026-09-25T09:00:10Z INFO  [ci] checkout main@3d9f21e -> /home/ci/builds/recipescale/main
+2026-09-25T09:00:11Z INFO  [ci] python 3.11.6, pytest 8.2.1
+2026-09-25T09:00:12Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-09-25T09:00:12Z INFO  [pytest] structure + flour + water/salt PASSED; honey, pct x3, allergens, nutrition, dough FAILED
+2026-09-25T09:00:13Z INFO  [pytest] 7 failed, 3 passed in 0.04s
+2026-09-25T09:00:13Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-25T09:00:14Z INFO  [ci] notification sent to #recipescale-ci
+2026-09-25T14:31:02Z INFO  [ci] job unit-tests starting (build #772)
+2026-09-25T14:31:02Z INFO  [ci] checkout main@3d9f21e -> /home/ci/builds/recipescale/main
+2026-09-25T14:31:04Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-09-25T14:31:04Z INFO  [pytest] 7 failed, 3 passed in 0.04s
+2026-09-25T14:31:04Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-26T02:08:11Z INFO  [ci] job nightly-batch starting (build #773)
+2026-09-26T02:08:11Z INFO  [ci] checkout main@3d9f21e -> /home/ci/builds/recipescale/main
+2026-09-26T02:08:13Z INFO  [batch] scaling data/recipes/sourdough.txt x4
+2026-09-26T02:08:13Z INFO  [batch] scaling data/recipes/brioche.txt x6
+2026-09-26T02:08:14Z INFO  [batch] scaling data/recipes/crackers.txt x10
+2026-09-26T02:08:15Z INFO  [batch] wrote /tmp/out/production_2026_09_26.txt
+2026-09-26T02:08:15Z INFO  [ci] job nightly-batch finished in 4.1s
+2026-09-26T09:00:09Z INFO  [ci] job unit-tests starting (build #774)
+2026-09-26T09:00:12Z INFO  [pytest] 7 failed, 3 passed in 0.05s
+2026-09-26T09:00:12Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-29T09:00:11Z INFO  [ci] job unit-tests starting (build #777)
+2026-09-29T09:00:11Z INFO  [ci] checkout branch fix/issue-17-kcal-precision@b04aa19
+2026-09-29T09:00:13Z INFO  [pytest] 7 failed, 3 passed in 0.04s
+2026-09-29T09:00:13Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-29T09:00:14Z WARN  [ci] branch fix/issue-17-kcal-precision does NOT turn suite green
+2026-10-02T09:00:10Z INFO  [ci] job unit-tests starting (build #781)
+2026-10-02T09:00:12Z INFO  [pytest] 7 failed, 3 passed in 0.04s
+2026-10-02T09:00:12Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-03T02:08:09Z INFO  [ci] job nightly-batch starting (build #782)
+2026-10-03T02:08:13Z INFO  [batch] wrote /tmp/out/production_2026_10_03.txt
+2026-10-03T02:08:13Z INFO  [ci] job nightly-batch finished in 4.4s
+2026-10-03T09:00:10Z INFO  [ci] job unit-tests starting (build #783)
+2026-10-03T09:00:12Z INFO  [pytest] 7 failed, 3 passed in 0.05s
+2026-10-03T09:00:12Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-05T09:00:09Z INFO  [ci] job unit-tests starting (build #784)
+2026-10-05T09:00:11Z INFO  [pytest] 7 failed, 3 passed in 0.04s
+2026-10-05T09:00:11Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-06T09:00:11Z INFO  [ci] job unit-tests starting (build #785)
+2026-10-06T09:00:11Z INFO  [ci] checkout branch fix/issue-17-kcal-precision-v2@c71d0e2
+2026-10-06T09:00:13Z INFO  [pytest] 7 failed, 3 passed in 0.04s
+2026-10-06T09:00:13Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-06T09:00:14Z WARN  [ci] patch v2 also does NOT turn suite green; bisect session proposed

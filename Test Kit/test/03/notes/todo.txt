@@ -1,0 +1,21 @@
+TODO (scratch pad, not groomed)
+
+- [ ] issue #29: blacklist rejects reasonable passwords. r.alvarez's
+      data-path patch in fix_suggestion.md - apply + rerun. BLOCKING
+      v1.3.x rollout (docs/rollout.md). (note: branch
+      fix/issue-29-blacklist-drift did NOT go green, logs/ci.log build
+      #292 - r.alvarez thinks the loader needs the active-section
+      parser, second attempt in flight)
+- [ ] t.oka keeps asking why the failing rule ids are min_length /
+      needs_special and not blacklisted. Fair question, parked until
+      the second patch attempt lands - don't relitigate in the meantime
+- [ ] quarterly credential audit dry-run (due 2026-10-10) - confirm
+      --no-blacklist flag still works on v1.2.3 pin
+- [ ] issue #26: meter label hysteresis (parked behind #29)
+- [x] v1.3.0 released 2026-09-20 (blacklist data-path refresh)
+- [ ] migrate breach feed to the new schema before Q4 (owner: data-eng)
+- [ ] SSO follow-up: confirm hyphen/underscore handling matches the
+      IdP's own rules (their docs say symbols "including - and _")
+- [ ] clean the struck section out of data/common_passwords.txt once
+      #29 is closed - keeping struck entries next to active ones is
+      what got us here

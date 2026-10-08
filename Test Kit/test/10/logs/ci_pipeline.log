@@ -1,0 +1,48 @@
+2026-09-18T09:00:11Z INFO  [ci] job unit-tests starting (build #402)
+2026-09-18T09:00:11Z INFO  [ci] checkout main@8c14bb9 -> /home/ci/builds/textidx/main
+2026-09-18T09:00:12Z INFO  [ci] python 3.11.6, pytest 8.2.1
+2026-09-18T09:00:13Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-09-18T09:00:13Z INFO  [pytest] structure + tie-query + no-match PASSED; order/score queries FAILED
+2026-09-18T09:00:13Z INFO  [pytest] 5 failed, 5 passed in 0.03s
+2026-09-18T09:00:14Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-18T09:00:15Z INFO  [ci] notification sent to #textidx-ci
+2026-09-19T09:00:10Z INFO  [ci] job unit-tests starting (build #405)
+2026-09-19T09:00:12Z INFO  [pytest] 5 failed, 5 passed in 0.03s
+2026-09-19T09:00:12Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-22T09:00:09Z INFO  [ci] job unit-tests starting (build #408)
+2026-09-22T09:00:11Z INFO  [pytest] 5 failed, 5 passed in 0.03s
+2026-09-22T09:00:11Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-25T02:06:44Z INFO  [ci] job nightly-reindex starting (build #410)
+2026-09-25T02:06:44Z INFO  [ci] checkout main@8c14bb9 -> /home/ci/builds/textidx/main
+2026-09-25T02:06:45Z INFO  [reindex] docs=7 terms=512 built in 0.11s
+2026-09-25T02:06:45Z INFO  [ci] job nightly-reindex finished in 1.2s
+2026-09-25T09:00:10Z INFO  [ci] job unit-tests starting (build #411)
+2026-09-25T09:00:12Z INFO  [pytest] 5 failed, 5 passed in 0.03s
+2026-09-25T09:00:12Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-30T09:00:11Z INFO  [ci] job unit-tests starting (build #414)
+2026-09-30T09:00:11Z INFO  [ci] checkout branch fix/issue-21-tokenizer-regex@5e77d01
+2026-09-30T09:00:13Z INFO  [pytest] 5 failed, 5 passed in 0.03s
+2026-09-30T09:00:13Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-30T09:00:14Z WARN  [ci] branch fix/issue-21-tokenizer-regex does NOT turn suite green
+2026-10-01T09:00:10Z INFO  [ci] job unit-tests starting (build #415)
+2026-10-01T09:00:12Z INFO  [pytest] 5 failed, 5 passed in 0.03s
+2026-10-01T09:00:12Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-05T09:00:09Z INFO  [ci] job unit-tests starting (build #417)
+2026-10-05T09:00:11Z INFO  [pytest] 5 failed, 5 passed in 0.03s
+2026-10-05T09:00:11Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-06T02:05:31Z INFO  [ci] job nightly-reindex starting (build #418)
+2026-10-06T02:05:31Z INFO  [ci] checkout main@8c14bb9 -> /home/ci/builds/textidx/main
+2026-10-06T02:05:32Z INFO  [reindex] docs=7 terms=512 built in 0.10s
+2026-10-06T02:05:32Z INFO  [reindex] probe 'water' -> hiking:1.151, gardening:1.726, cooking:2.301
+2026-10-06T02:05:32Z INFO  [reindex] probe 'night sky' -> hiking:0.875, jazz:0.875, astronomy:6.238
+2026-10-06T02:05:32Z INFO  [reindex] probe 'club' -> chess:1.204, hiking:1.204, jazz:1.204
+2026-10-06T02:05:33Z WARN  [reindex] probe rankings look wrong vs docs-team expectations (#21)
+2026-10-06T02:05:33Z INFO  [ci] job nightly-reindex finished in 1.4s
+2026-10-06T09:00:10Z INFO  [ci] job unit-tests starting (build #419)
+2026-10-06T09:00:10Z INFO  [ci] checkout main@8c14bb9 -> /home/ci/builds/textidx/main
+2026-10-06T09:00:12Z INFO  [pytest] 5 failed, 5 passed in 0.03s
+2026-10-06T09:00:12Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-07T09:00:09Z INFO  [ci] job lint starting (build #420)
+2026-10-07T09:00:09Z INFO  [ci] checkout main@8c14bb9 -> /home/ci/builds/textidx/main
+2026-10-07T09:00:11Z INFO  [ruff] 0 errors, 2 warnings (line length in docs/)
+2026-10-07T09:00:11Z INFO  [ci] job lint finished: exit code 0

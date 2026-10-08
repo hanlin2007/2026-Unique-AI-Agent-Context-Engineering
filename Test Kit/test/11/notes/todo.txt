@@ -1,0 +1,26 @@
+TODO (scratch pad, not groomed - the oldest open items live at the bottom)
+
+- [ ] issue #33: CSV parsing loses/mistimes rows. k.osei's patch in
+      fix_suggestion.md - review + apply + rerun suite. BLOCKING the
+      weekly proposals that the team leads now check by hand.
+      (note: branch fix/issue-33-icsio-rows did NOT go green on the
+      first attempt, see logs/ci_pipeline.log build #297 - k.osei
+      suspects the ops export itself; manual-vs-tool diff in flight)
+- [ ] issue #29: CLI busy output order for same-start events
+      (cosmetic, backlog)
+- [x] v0.4.0 infra cleanup batch merged (2026-09-22) - DictReader
+      rewrite landed there, suite went red two days later
+- [ ] chase ops about the blank-line day separators in the export
+      (#11 history; the parser should not have to care, but still)
+- [ ] decide: 15-minute scan step configurable? parked - the data
+      dictionary says the step is contract, and the suite pins it
+- [ ] ask the team leads whether 45 is still the right default
+      duration for proposals; two of them asked for 30-minute
+      standup slots last week
+- [ ] write the bisect writeup template BEFORE Friday's session so
+      the postmortem doesn't drag into a second week again
+- [ ] intern onboarding doc - currently three paragraphs in an
+      email, deserves a real page
+- [ ] add "rows loaded vs rows in file" sanity print to
+      scripts/propose_week.py (parking-lot item from the kickoff;
+      uncontroversial, just needs doing)

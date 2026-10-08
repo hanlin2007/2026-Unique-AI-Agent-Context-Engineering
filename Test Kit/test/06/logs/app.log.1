@@ -1,0 +1,45 @@
+2026-09-29T09:00:11Z INFO  [ci] job unit-tests starting (build #1204)
+2026-09-29T09:00:11Z INFO  [ci] checkout main@9c31de7 -> /home/ci/builds/stocktake/main
+2026-09-29T09:00:12Z INFO  [ci] python 3.11.6, pytest 8.2.1
+2026-09-29T09:00:13Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-09-29T09:00:13Z INFO  [pytest] 7 failed, 3 passed in 0.04s
+2026-09-29T09:00:14Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-29T09:00:15Z INFO  [ci] notification sent to #stocktake-ci
+2026-09-29T14:22:41Z INFO  [ci] job unit-tests starting (build #1205)
+2026-09-29T14:22:41Z INFO  [ci] checkout main@9c31de7 -> /home/ci/builds/stocktake/main
+2026-09-29T14:22:43Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-09-29T14:22:43Z INFO  [pytest] 7 failed, 3 passed in 0.04s
+2026-09-29T14:22:43Z ERROR [ci] job unit-tests finished: exit code 1
+2026-09-30T02:08:19Z INFO  [ci] job nightly-snapshot starting (build #1206)
+2026-09-30T02:08:19Z INFO  [ci] checkout main@9c31de7 -> /home/ci/builds/stocktake/main
+2026-09-30T02:08:21Z INFO  [snapshot] loading lots data/lots.csv (40 lots)
+2026-09-30T02:08:21Z INFO  [snapshot] loading movements data/movements.csv (66 movements)
+2026-09-30T02:08:22Z INFO  [snapshot] applying movements
+2026-09-30T02:08:23Z INFO  [snapshot] valuation canary: 5965.60 (ledger workbook says 5909.80)
+2026-09-30T02:08:23Z WARN  [snapshot] canary drift 0.94% - under alert threshold 1.50%, not paging
+2026-09-30T02:08:24Z INFO  [snapshot] wrote /tmp/out/snapshot_2026_09_30.json (41 KB)
+2026-09-30T02:08:25Z INFO  [ci] job nightly-snapshot finished in 6.1s
+2026-10-01T02:08:19Z INFO  [ci] job nightly-snapshot starting (build #1207)
+2026-10-01T02:08:21Z INFO  [snapshot] loading lots data/lots.csv (40 lots)
+2026-10-01T02:08:22Z INFO  [snapshot] valuation canary: 5965.60 (ledger workbook says 5909.80)
+2026-10-01T02:08:22Z WARN  [snapshot] canary drift 0.94% - under alert threshold 1.50%, not paging
+2026-10-01T02:08:25Z INFO  [ci] job nightly-snapshot finished in 5.8s
+2026-10-02T09:31:02Z INFO  [ci] job unit-tests starting (build #1208)
+2026-10-02T09:31:02Z INFO  [ci] checkout fix/issue-57-valuation-rounding@b2e77a1
+2026-10-02T09:31:04Z INFO  [pytest] collected 10 items from tests/test_task.py
+2026-10-02T09:31:04Z INFO  [pytest] 7 failed, 3 passed in 0.05s
+2026-10-02T09:31:04Z ERROR [ci] job unit-tests finished: exit code 1
+2026-10-02T09:31:05Z INFO  [ci] t.almeida's patch v1 did NOT go green - see notes/meeting_2026_10_03.md
+2026-10-03T02:08:19Z INFO  [ci] job nightly-snapshot starting (build #1209)
+2026-10-03T02:08:21Z INFO  [snapshot] loading lots data/lots.csv (40 lots)
+2026-10-03T02:08:21Z INFO  [snapshot] loading movements data/movements.csv (66 movements)
+2026-10-03T02:08:22Z INFO  [snapshot] valuation canary: 5965.60 (ledger workbook says 5909.80)
+2026-10-03T02:08:22Z WARN  [snapshot] canary drift 0.94% - under alert threshold 1.50%, not paging
+2026-10-03T02:08:25Z INFO  [ci] job nightly-snapshot finished in 6.0s
+2026-10-03T16:40:12Z INFO  [ci] job lint starting (build #1210)
+2026-10-03T16:40:14Z INFO  [ci] ruff clean, 0 warnings
+2026-10-03T16:40:14Z INFO  [ci] job lint finished in 2.1s
+2026-10-04T02:08:19Z INFO  [ci] job nightly-snapshot starting (build #1211)
+2026-10-04T02:08:22Z INFO  [snapshot] valuation canary: 5965.60 (ledger workbook says 5909.80)
+2026-10-04T02:08:22Z WARN  [snapshot] canary drift 0.94% - under alert threshold 1.50%, not paging
+2026-10-04T02:08:25Z INFO  [ci] job nightly-snapshot finished in 5.7s

@@ -1,0 +1,8 @@
+[project]
+name = "textidx"
+version = "0.3.1"
+description = "Miniature folder search engine: tf-idf ranked keyword queries over small text docs"
+requires-python = ">=3.9"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

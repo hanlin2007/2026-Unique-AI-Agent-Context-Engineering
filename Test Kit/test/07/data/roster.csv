@@ -1,0 +1,13 @@
+student_id,name,section,email
+S01,A. Ferreira,NS-201-A,a.ferreira@univ.example.edu
+S02,B. Okafor,NS-201-A,b.okafor@univ.example.edu
+S03,C. Lindqvist,NS-201-A,c.lindqvist@univ.example.edu
+S04,D. Marsh,NS-201-B,d.marsh@univ.example.edu
+S05,E. Tanaka,NS-201-B,e.tanaka@univ.example.edu
+S06,F. Adeyemi,NS-201-B,f.adeyemi@univ.example.edu
+S07,G. Petrov,NS-201-C,g.petrov@univ.example.edu
+S08,H. Nguyen,NS-201-C,h.nguyen@univ.example.edu
+S09,I. Kowalski,NS-201-C,i.kowalski@univ.example.edu
+S10,J. Mensah,NS-201-D,j.mensah@univ.example.edu
+S11,K. O'Rourke,NS-201-D,k.orourke@univ.example.edu
+S12,L. Bianchi,NS-201-D,l.bianchi@univ.example.edu

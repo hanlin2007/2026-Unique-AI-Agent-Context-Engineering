@@ -1,0 +1,54 @@
+================================================================================
+budgetsplit CI - captured stderr - 2026-09-18T02:07:55Z
+job: nightly-close  build: #219  ref: tags/v0.7.1  runner: ci-ubuntu-03
+================================================================================
+Traceback (most recent call last):
+  File "/home/ci/builds/budgetsplit/v0.7.1/scripts/monthly_close.py", line 58, in <module>
+    appendix = fx_appendix(total_eur, display="DKK")
+  File "/home/ci/builds/budgetsplit/v0.7.1/scripts/monthly_close.py", line 41, in fx_appendix
+    return convert(amount, "EUR", display)
+  File "/home/ci/builds/budgetsplit/v0.7.1/src/fx.py", line 44, in convert
+    _check(dst)
+  File "/home/ci/builds/budgetsplit/v0.7.1/src/fx.py", line 27, in _check
+    raise UnknownCurrencyError(code)
+src.rates.UnknownCurrencyError: DKK
+================================================================================
+NOTE (triage, 2026-09-18 08:33 UTC, s.nakamura):
+  v0.7.1 era: the close script was pointed at DKK before the rate
+  table had it. Config error, patched same day. KEPT HERE because
+  fx.py is once again the suspect for the red suite (issue #51): same
+  module, and the drift signature (totals a hair LOW) matches the old
+  #12/#19 rounding family. See KNOWN_ISSUES.md and fix_suggestion.md.
+================================================================================
+
+================================================================================
+budgetsplit CI - captured stdout tail - 2026-10-01T16:22:53Z
+job: unit-tests  build: #237  ref: fix/issue-51-fx-quantize@c07d3a1
+================================================================================
+$ python -m pytest tests/test_task.py -q
+..FFFFF.FFF.                                                              [100%]
+=================================== FAILURES ===================================
+______________ test_balance_anna ______________
+assert 556.75 == 97.72
+______________ test_balance_dan ______________
+assert -126.97 == -589.98
+______________ test_balance_erin ______________
+assert 708.45 == 250.55
+______________ test_transfer_count ______________
+assert 1 == 4
+______________ test_transfers_exact ______________
+assert [{'from': 'carla', 'to': 'dan', 'amount': 126.97}] == [...]
+______________ test_grand_total_eur ______________
+assert 5961.97 == 5962.84
+______________ test_fx_grand_total_usd ______________
+assert 6475.89 == 6476.84
+7 failed, 3 passed in 0.05s
+================================================================================
+NOTE (triage, 2026-10-01 17:02 UTC, s.nakamura):
+  Failure signature with the quantize patch applied - the totals moved
+  by less than a cent and everything else is unchanged. I maintain the
+  totals are a rounding story (0.87 EUR in 5963 is 0.015%). d.reyes
+  countered in review that the balances are off by HUNDREDS and the
+  lone transfer pays the WRONG person, and no rounding mode does that.
+  Iterating on the rates-table half of the patch next.
+================================================================================

@@ -1,0 +1,30 @@
+TODO (scratch pad, not groomed)
+
+- [ ] issue #17: nutrition drift AGAIN. h.tanaka's patch in
+      fix_suggestion.md - review + apply + rerun suite. BLOCKING the
+      wholesale price list refresh.
+      (note: branch fix/issue-17-kcal-precision did NOT go green on
+      the first attempt, see logs/ci_pipeline.log build #777 -
+      probably the patch needs a second pass, ask h.tanaka)
+- [ ] reprint cracker allergen cards (poppy added 2026-08) - DONE for
+      sesame, poppy card still at the printer
+- [ ] issue #14: CLI table alignment with long names (cosmetic, backlog)
+- [x] v0.4.0 unit table review signed off (2026-09-18) - table stable
+- [ ] decide: weigh eggs in grams everywhere? brioche already does,
+      convert the retail recipes next quarter
+- [ ] per-loaf nutrition breakdown (feature request from the cafe)
+- [ ] fill in EXPECTED_KCAL for brioche and crackers in
+      scripts/batch_scale.py once the spec sheet entries are signed -
+      until then --check only guards sourdough (which is exactly the
+      recipe that is drifting right now, see #17)
+- [ ] archive logs older than 90 days (ci box disk was at 81% last
+      Friday, j.whitfield noticed during the #775 triage)
+- [ ] ask Rosa whether the wholesale audit wants percentages printed
+      to 2dp next season - data dictionary currently says 1dp and the
+      suite pins 1dp, so this is a contract change not a tweak
+- [ ] write the "trace explainer" doc j.whitfield asked for at the
+      postmortem kickoff (walk one debug trace line by line for new
+      hires) - parked until after the #17 bisect, if there is one
+- [ ] reorder FLOUR_INGREDIENTS alphabetically? semolina sits oddly
+      at the end. cosmetic, do it in a no-op cleanup commit, never
+      mixed into a behaviour change

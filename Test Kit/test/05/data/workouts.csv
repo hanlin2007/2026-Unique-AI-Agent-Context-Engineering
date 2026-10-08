@@ -1,0 +1,64 @@
+date,type,distance_km,duration_min,avg_hr,notes
+2026-07-27,run,8.02,42.5,138,easy start to the block
+2026-07-28,run,6.11,33.2,145,steady morning loop
+2026-07-29,bike,25.40,58.0,121,cross-training spin
+2026-07-30,run,9.03,47.8,142,steady with strides
+2026-07-31,rest,0.0,0.0,0,planned rest day
+2026-08-01,run,5.05,24.9,158,short sharp strides
+2026-08-02,run,14.20,78.4,136,long run along the river
+2026-08-03,run,8.00,41.9,139,easy
+2026-08-04,run,6.35,32.8,147,steady
+2026-08-05,run,10.02,52.5,141,midweek medium-long
+2026-08-06,bike,30.10,66.0,118,endurance spin
+2026-08-07,run,5.22,26.1,155,strides session
+2026-08-08,run,7.18,38.0,143,steady
+2026-08-09,run,15.05,82.7,135,long run
+2026-08-10,run,8.10,42.2,138,easy
+2026-08-11,run,6.00,31.5,146,tempo-leaning steady
+2026-08-12,run,9.15,48.1,142,steady
+2026-08-13,bike,28.00,61.5,120,spin with a friend
+2026-08-14,rest,0.0,0.0,0,planned rest day
+2026-08-15,run,6.42,33.9,144,steady
+2026-08-16,run,16.02,87.9,134,long run
+2026-08-17,run,6.20,33.0,140,cutback week easy
+2026-08-18,run,5.10,26.6,143,easy
+2026-08-19,bike,20.00,45.0,117,light spin
+2026-08-20,run,7.00,37.2,141,steady
+2026-08-21,run,5.30,28.4,146,strides
+2026-08-22,run,6.05,32.2,144,easy
+2026-08-23,run,10.10,55.9,137,cutback long run
+2026-08-24,run,8.20,42.8,139,easy
+2026-08-25,run,6.25,32.1,148,steady
+2026-08-26,run,10.15,53.2,142,midweek medium-long
+2026-08-27,bike,32.00,70.3,119,endurance spin
+2026-08-28,run,5.40,27.3,156,strides
+2026-08-29,run,7.30,39.5,143,steady
+2026-08-30,run,17.05,93.8,136,long run
+2026-08-31,run,8.05,41.7,138,easy
+2026-09-01,run,6.40,33.0,147,steady
+2026-09-02,run,9.30,49.6,141,steady
+2026-09-03,bike,27.50,60.1,121,spin
+2026-09-04,run,5.15,25.8,157,strides
+2026-09-05,run,7.45,40.2,142,steady
+2026-09-06,run,18.00,98.6,135,long run
+2026-09-07,run,8.15,42.6,139,easy
+2026-09-08,run,6.05,31.2,145,steady
+2026-09-09,run,10.05,52.9,140,midweek medium-long
+2026-09-10,bike,29.00,63.4,120,spin
+2026-09-11,run,5.35,27.0,154,strides
+2026-09-12,run,7.25,38.8,143,steady
+2026-09-13,run,18.55,101.4,136,peak long run
+2026-09-14,run,7.00,36.8,140,taper easy
+2026-09-15,run,5.20,27.1,146,taper steady
+2026-09-16,run,8.00,42.0,141,taper steady
+2026-09-17,bike,22.00,48.2,118,light spin
+2026-09-18,run,4.50,23.6,152,taper strides
+2026-09-19,run,6.00,31.7,144,taper steady
+2026-09-20,run,12.00,65.3,138,taper long run
+2026-09-21,run,6.10,32.4,142,race week easy
+2026-09-22,run,4.00,20.8,147,race week short
+2026-09-23,run,3.30,17.9,149,shakeout
+2026-09-24,bike,15.00,33.5,115,easy spin
+2026-09-25,run,5.00,26.3,144,pre-race strides
+2026-09-26,run,21.20,112.7,149,half marathon race
+2026-09-27,run,4.25,26.8,133,recovery jog

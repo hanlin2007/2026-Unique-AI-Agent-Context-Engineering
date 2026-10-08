@@ -1,0 +1,50 @@
+================================================================================
+fittrack CI - captured stderr - 2026-09-12T02:05:41Z
+job: nightly-parse  build: #158  ref: tags/v0.8.3  runner: ci-ubuntu-01
+================================================================================
+Traceback (most recent call last):
+  File "/home/ci/builds/fittrack/v0.8.3/scripts/weekly_email.py", line 45, in <module>
+    summary = build_summary(workouts)
+  File "/home/ci/builds/fittrack/v0.8.3/scripts/weekly_email.py", line 31, in build_summary
+    workouts = load_workouts(path)
+  File "/home/ci/builds/fittrack/v0.8.3/src/loader.py", line 47, in load_workouts
+    workouts = [parse_row(r) for r in csv.DictReader(fh)]
+  File "/home/ci/builds/fittrack/v0.8.3/src/loader.py", line 47, in <listcomp>
+    workouts = [parse_row(r) for r in csv.DictReader(fh)]
+  File "/home/ci/builds/fittrack/v0.8.3/src/loader.py", line 39, in parse_row
+    month = int(parts[1]); day = int(parts[2])
+ValueError: invalid literal for int() with base 10: 'Sep'
+================================================================================
+NOTE (triage, 2026-09-12 08:15 UTC, d.osei):
+  v0.8.3 era: the hand-rolled date splitter choked on a watch export
+  that used "12-Sep-2026". Fixed in v0.8.4 by moving to
+  date.fromisoformat (issue #27, CLOSED). KEPT HERE because loader.py
+  is once again the suspect for the red suite (issue #33): the v1.1.0
+  calendar-hardening release rewrote this same date path, and the red
+  builds start exactly there. See KNOWN_ISSUES.md and fix_suggestion.md.
+================================================================================
+
+================================================================================
+fittrack CI - captured stdout tail - 2026-09-26T18:41:22Z
+job: unit-tests  build: #176  ref: fix/issue-33-date-normalise@9d4e2b7
+================================================================================
+$ python -m pytest tests/test_task.py -q
+.....FF.FF.F                                                              [100%]
+=================================== FAILURES ===================================
+______________ test_avg_pace_mile ______________
+assert 3.31 == 8.574
+______________ test_peak_week_pace_mile ______________
+assert 3.296 == 8.538
+______________ test_fitness_final ______________
+assert 65.269 == 64.057
+______________ test_fitness_peak ______________
+assert 82.51 == 80.406
+4 failed, 6 passed in 0.04s
+================================================================================
+NOTE (triage, 2026-09-26 19:05 UTC, m.petrova):
+  Failure signature with the date-normalisation patch applied - i.e.
+  UNCHANGED, exactly as d.osei predicted in fix_suggestion.md. I still
+  owe an explanation for why weekly volumes are right while every
+  derived figure is off. Next step on my list is a second loader pass
+  (iso_week property this time).
+================================================================================
